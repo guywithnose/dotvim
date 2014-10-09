@@ -1,0 +1,7 @@
+" vim: filetype=vim
+let php_sql_query=1
+let php_htmlInStrings=1
+let g:syntastic_php_checkers = ['php', 'phpcs']
+let g:syntastic_always_populate_loc_list = 1
+let g:php_refactor_command='php ~/.vim/refactor.phar.gz'
+let g:markdown_fenced_languages = ['js=javascript', 'json=javascript', 'sh', 'php', 'apache', 'ruby']

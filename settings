@@ -1,0 +1,25 @@
+" vim: filetype=vim
+set smartindent
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set expandtab
+set bs=indent,eol,start " allow backspacing over everything in insert mode
+set ai                  " always set autoindenting on
+set incsearch           " show the best match while search is typed
+set hlsearch           " show the best match while search is typed
+set scrolloff=3         " leave some context around the cursor
+set autoread
+set background=dark
+set number
+set relativenumber
+set modeline
+colorscheme slate
+
+au BufWinLeave *.* mkview
+au BufWinEnter *.* silent loadview
+
+syntax on
+filetype on
+filetype plugin indent on
+
