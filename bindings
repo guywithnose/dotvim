@@ -16,6 +16,7 @@ imap <Leader>' <c-o>:SyntasticToggleMode<return>
 map <Leader>d :call DockerBuild()<return>
 imap <Leader>d <c-o>:call DockerBuild()<return>
 nmap <c-p> :CtrlP
+map <Leader>p :EnableFastPHPFolds<return>
 
 " Copy and paste
 nmap <c-c> "+yy
