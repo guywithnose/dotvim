@@ -3,3 +3,13 @@ function! DockerBuild()
   let b:imageName=fnamemodify(bufname('%'), ':p:h:t')
   exec '!docker build -t ' . b:imageName . ' . && docker run -it ' . b:imageName . ' bash'
 endfunction
+
+function! PushCurrentBranch()
+  let b:currentBranchName=fugitive#head()
+  exec 'Gpush origin ' . b:currentBranchName
+endfunction
+
+function! PushCurrentBranchForce()
+  let b:currentBranchName=fugitive#head()
+  exec 'Gpush -f origin ' . b:currentBranchName
+endfunction

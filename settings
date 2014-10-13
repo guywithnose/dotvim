@@ -14,6 +14,8 @@ set background=dark
 set number
 set relativenumber
 set modeline
+set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
+set laststatus=2
 colorscheme slate
 
 au BufWinLeave *.* mkview
