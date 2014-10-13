@@ -69,3 +69,6 @@ autocmd BufNewFile,BufRead */*vhosts*.conf set filetype=apache
 
 " Make
 autocmd FileType make set noexpandtab
+
+" Dockerfile
+au BufRead,BufNewFile Dockerfile set filetype=dockerfile
