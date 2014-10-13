@@ -15,6 +15,7 @@ map <Leader>' :SyntasticToggleMode<return>
 imap <Leader>' <c-o>:SyntasticToggleMode<return>
 map <Leader>d :call DockerBuild()<return>
 imap <Leader>d <c-o>:call DockerBuild()<return>
+nmap <c-p> :CtrlP
 
 " Copy and paste
 nmap <c-c> "+yy
