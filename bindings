@@ -13,6 +13,8 @@ map <Leader>f :update<return>:PhpunitCurrentFunction<return>
 imap <Leader>f <c-o>:update<return><c-o>:PhpunitCurrentFunction<return>
 map <Leader>' :SyntasticToggleMode<return>
 imap <Leader>' <c-o>:SyntasticToggleMode<return>
+map <Leader>d :call DockerBuild()<return>
+imap <Leader>d <c-o>:call DockerBuild()<return>
 
 " Copy and paste
 nmap <c-c> "+yy

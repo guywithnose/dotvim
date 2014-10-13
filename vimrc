@@ -6,3 +6,4 @@ source ~/.vim/commands
 source ~/.vim/fileTypes
 source ~/.vim/settings
 source ~/.vim/variables
+source ~/.vim/functions

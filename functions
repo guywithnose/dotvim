@@ -1,0 +1,5 @@
+" vim: filetype=vim
+function! DockerBuild()
+  let b:imageName=fnamemodify(bufname('%'), ':p:h:t')
+  exec '!docker build -t ' . b:imageName . ' . && docker run -it ' . b:imageName . ' bash'
+endfunction
