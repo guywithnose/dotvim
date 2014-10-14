@@ -1,8 +1,8 @@
 " vim: filetype=vim
 map <Leader>w :update<return>
 imap <Leader>w <c-o>:update<return>
-map <Leader>q :wq<return>
-imap <Leader>q <c-o>:wq<return>
+map <Leader>q :x<return>
+imap <Leader>q <c-o>:x<return>
 map <Leader>s :update<return>:PhpCs<return>
 imap <Leader>s <c-o>:update<return><c-o>:PhpCs<return>
 map <Leader>ns :update<return>:PhpCsNoWarnings<return>
