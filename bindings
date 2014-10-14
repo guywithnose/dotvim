@@ -20,6 +20,9 @@ map <Leader>p :EnableFastPHPFolds<return>
 map <Leader>gp :call PushCurrentBranch()<return>
 map <Leader>gpf :call PushCurrentBranchForce()<return>
 
+cnoremap <c-p> <up>
+cnoremap <c-n> <down>
+
 " Copy and paste
 nmap <c-c> "+yy
 vmap <c-c> "+y
