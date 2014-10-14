@@ -1,8 +1,16 @@
 <c-h>, <c-w>, <c-u> :h c_ctrl-w
-Remap caps lock to ctrl
 h c_ctrl-r
 h i_ctrl-r
 h ctrl-[
 <c-r>=
 <c-r><c-p>
 digraphs
+v_o
+gv
+Indent once, repeat PVp42
+:copy, :t, :m
+:normal
+@:
+h c_ctrl-r_ctrl-w
+ctrl-p, ctrl-n instead of <up><down>
+h c_ctrl-f
