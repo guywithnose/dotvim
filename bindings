@@ -19,7 +19,7 @@ map <Leader>d :call DockerBuild()<return>
 imap <Leader>d <c-o>:call DockerBuild()<return>
 nmap <c-p> :CtrlP<return>
 map <Leader>p :EnableFastPHPFolds<return>
-map <Leader>r :source ~/.vimrc<return>
+map <Leader><F5> :source ~/.vimrc<return>
 cnoremap <c-p> <up>
 cnoremap <c-n> <down>
 
