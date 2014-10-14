@@ -19,13 +19,14 @@ map <Leader>d :call DockerBuild()<return>
 imap <Leader>d <c-o>:call DockerBuild()<return>
 nmap <c-p> :CtrlP<return>
 map <Leader>p :EnableFastPHPFolds<return>
+map <Leader>r :source ~/.vimrc<return>
+cnoremap <c-p> <up>
+cnoremap <c-n> <down>
+
+" Git
 map <Leader>gp :call PushCurrentBranch()<return>
 map <Leader>gpf :call PushCurrentBranchForce()<return>
 map <Leader>gs :Gstatus<return>
-map <Leader>r :source ~/.vimrc<return>
-
-cnoremap <c-p> <up>
-cnoremap <c-n> <down>
 
 " Copy and paste
 nmap <c-c> "+yy
