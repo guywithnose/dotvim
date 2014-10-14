@@ -1,0 +1,8 @@
+<c-h>, <c-w>, <c-u> :h c_ctrl-w
+Remap caps lock to ctrl
+h c_ctrl-r
+h i_ctrl-r
+h ctrl-[
+<c-r>=
+<c-r><c-p>
+digraphs
