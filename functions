@@ -6,10 +6,18 @@ endfunction
 
 function! PushCurrentBranch()
   let b:currentBranchName=fugitive#head()
-  exec 'Gpush origin ' . b:currentBranchName
+  if b:currentBranchName != ''
+    exec 'Gpush origin ' . b:currentBranchName
+  else
+    echo 'Not currently on a branch!'
+  endif
 endfunction
 
 function! PushCurrentBranchForce()
   let b:currentBranchName=fugitive#head()
-  exec 'Gpush -f origin ' . b:currentBranchName
+  if b:currentBranchName != ''
+    exec 'Gpush -f origin ' . b:currentBranchName
+  else
+    echo 'Not currently on a branch!'
+  endif
 endfunction
