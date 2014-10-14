@@ -19,6 +19,7 @@ nmap <c-p> :CtrlP<return>
 map <Leader>p :EnableFastPHPFolds<return>
 map <Leader>gp :call PushCurrentBranch()<return>
 map <Leader>gpf :call PushCurrentBranchForce()<return>
+map <Leader>r :source ~/.vimrc<return>
 
 cnoremap <c-p> <up>
 cnoremap <c-n> <down>
