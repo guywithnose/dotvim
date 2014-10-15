@@ -27,4 +27,3 @@ au BufWinEnter *.* silent loadview
 syntax on
 filetype on
 filetype plugin indent on
-

@@ -15,8 +15,8 @@ map <Leader>f :update<return>:PhpunitCurrentFunction<return>
 imap <Leader>f <c-o>:update<return><c-o>:PhpunitCurrentFunction<return>
 map <Leader>' :SyntasticToggleMode<return>
 imap <Leader>' <c-o>:SyntasticToggleMode<return>
-map <Leader>d :call DockerBuild()<return>
-imap <Leader>d <c-o>:call DockerBuild()<return>
+map <Leader>d :update<return>:call DockerBuild()<return>
+imap <Leader>d <c-o>:update<return><c-o>:call DockerBuild()<return>
 nmap <c-p> :CtrlP<return>
 map <Leader>p :EnableFastPHPFolds<return>
 map <Leader><F5> :source ~/.vimrc<return>
@@ -36,10 +36,9 @@ map <Leader>gp :call PushCurrentBranch()<return>
 map <Leader>gpf :call PushCurrentBranchForce()<return>
 map <Leader>gs :Gstatus<return>
 
-" Copy and paste
+" Copy
 nmap <c-c> "+yy
 vmap <c-c> "+y
-imap <c-v> <c-o>"+p
 
 " Force myself to learn hjkl
 map <up> <nop>
