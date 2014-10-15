@@ -1,9 +1,9 @@
 " vim: filetype=vim
-cmap W w
-cmap Wa wa
-cmap Q q
-cmap Qa qa
-cmap w!! SudoWrite
+command! W w
+command! Wa wa
+command! Q q
+command! Qa qa
+cnoremap w!! SudoWrite
 
 command! PhpCs !php -l % && phpcs -n %
 command! PhpCsNoWarnings !php -l % && phpcs %
