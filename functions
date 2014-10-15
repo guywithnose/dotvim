@@ -21,3 +21,11 @@ function! PushCurrentBranchForce()
     echo 'Not currently on a branch!'
   endif
 endfunction
+
+function! SplitArray()
+  let oldSearch = @/
+
+  exec 's/\[\(.\)/\[\r\1/g | s/, /,\r/g | s/\(.\)\]/\1,\r\]/g | normal =a]'
+
+  let @/ = oldSearch
+endfunction
