@@ -5,9 +5,13 @@ command! Q q
 command! Qa qa
 cnoremap w!! SudoWrite
 
+" PHP
 command! PhpCs !php -l % && phpcs -n %
 command! PhpCsNoWarnings !php -l % && phpcs %
-
 command! Phpunit Dispatch phpunit --stop-on-failure %
 command! PhpunitCoverage Dispatch phpunit --stop-on-failure --coverage-html coverage %
 command! PhpunitCurrentFunction execute 'Dispatch phpunit --verbose --filter ' . cfi#get_func_name() . ' %'
+
+" Git
+command! Reb Git rebase dominion/master
+command! Rebi Git rebase -i dominion/master
