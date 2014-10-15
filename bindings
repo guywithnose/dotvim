@@ -39,7 +39,7 @@ map <Leader>gs :Gstatus<return>
 " Copy and paste
 nmap <c-c> "+yy
 vmap <c-c> "+y
-map <c-v> "+p
+imap <c-v> <c-o>"+p
 
 " Force myself to learn hjkl
 map <up> <nop>
