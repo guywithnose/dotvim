@@ -28,7 +28,7 @@ autocmd FileType coffee setlocal tabstop=2 shiftwidth=2 softtabstop=2
 
 " Javascript
 autocmd BufNewFile,BufRead *.js setf javascript
-autocmd FileType javascript setlocal tabstop=2 shiftwidth=2 softtabstop=2
+autocmd FileType javascript setlocal tabstop=2 shiftwidth=2 softtabstop=2 includeexpr=substitute(v:fname,'$','.js','g')
 
 " HTML
 autocmd FileType html setlocal tabstop=2 shiftwidth=2 softtabstop=2
