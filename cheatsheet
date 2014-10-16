@@ -22,3 +22,7 @@ ctrl-x s
 netrw scp
 ft;,
 search motion PV120 h jump-motions
+bwe h word-motions
+edit existing plugin
+h gi
+h g
