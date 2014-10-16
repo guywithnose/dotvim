@@ -20,3 +20,5 @@ ctrl-x s
 :find
 :Explore
 netrw scp
+ft;,
+search motion PV120 h jump-motions
