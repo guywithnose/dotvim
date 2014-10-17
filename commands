@@ -4,6 +4,7 @@ command! Wa wa
 command! Q q
 command! Qa qa
 cnoremap w!! SudoWrite
+cnoremap !! Dispatch
 
 " PHP
 command! PhpCs !php -l % && phpcs -n %
