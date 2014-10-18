@@ -1,9 +1,11 @@
-execute pathogen#infect()
-Helptags
+let vimdir=expand('<sfile>:h')
+execute 'source ' . vimdir . '/bundle/vim-pathogen/autoload/pathogen.vim'
+execute pathogen#infect('bundle/{}', vimdir . '/bundle/{}')
+execute pathogen#helptags()
 
-exec 'source ' . expand('<sfile>:h') . '/bindings'
-exec 'source ' . expand('<sfile>:h') . '/commands'
-exec 'source ' . expand('<sfile>:h') . '/fileTypes'
-exec 'source ' . expand('<sfile>:h') . '/settings'
-exec 'source ' . expand('<sfile>:h') . '/variables'
-exec 'source ' . expand('<sfile>:h') . '/functions'
+execute 'source ' . vimdir . '/bindings'
+execute 'source ' . vimdir . '/commands'
+execute 'source ' . vimdir . '/fileTypes'
+execute 'source ' . vimdir . '/settings'
+execute 'source ' . vimdir . '/variables'
+execute 'source ' . vimdir . '/functions'
