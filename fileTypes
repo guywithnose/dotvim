@@ -6,7 +6,6 @@ autocmd FileType phtml match ErrorMsg '\%>144v.\+'
 
 " C++
 autocmd FileType cpp match ErrorMsg '\%>80v.\+'
-autocmd FileType cpp setlocal expandtab
 
 " Git
 autocmd Filetype gitcommit setlocal spell textwidth=72
