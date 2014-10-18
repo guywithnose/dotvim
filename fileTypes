@@ -46,20 +46,8 @@ autocmd FileType css setlocal tabstop=2 shiftwidth=2 softtabstop=2
 " Less
 autocmd FileType less setlocal tabstop=2 shiftwidth=2 softtabstop=2
 
-" Opa
-autocmd FileType opa setlocal tabstop=2 shiftwidth=2 softtabstop=2
-
-" Stylus
-autocmd FileType stylus setlocal tabstop=2 shiftwidth=2 softtabstop=2
-
 " Vim
 autocmd FileType vim setlocal tabstop=2 shiftwidth=2 softtabstop=2
-
-" WDDX
-autocmd BufNewFile,BufRead *.wddx setfiletype xml
-
-" Mutt Mail
-autocmd BufRead /tmp/mutt-* setlocal textwidth=78 formatoptions=croql
 
 " JSON
 autocmd BufNewFile,BufRead *.json setfiletype javascript
