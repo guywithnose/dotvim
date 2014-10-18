@@ -1,9 +1,9 @@
 execute pathogen#infect()
 Helptags
 
-source ~/.vim/bindings
-source ~/.vim/commands
-source ~/.vim/fileTypes
-source ~/.vim/settings
-source ~/.vim/variables
-source ~/.vim/functions
+exec 'source ' . expand('<sfile>:h') . '/bindings'
+exec 'source ' . expand('<sfile>:h') . '/commands'
+exec 'source ' . expand('<sfile>:h') . '/fileTypes'
+exec 'source ' . expand('<sfile>:h') . '/settings'
+exec 'source ' . expand('<sfile>:h') . '/variables'
+exec 'source ' . expand('<sfile>:h') . '/functions'
