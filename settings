@@ -14,7 +14,7 @@ set background=dark
 set number
 set relativenumber
 set modeline
-set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
+set statusline=%<%F%y\ %h%m%r%{fugitive#statusline()}%=%a\ %q%k\ %b\ %l\\%L,%c%V\ %p%%\ b:%n
 set laststatus=2
 set nrformats=
 set wildmode=longest,list
