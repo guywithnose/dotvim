@@ -24,6 +24,7 @@ map <Leader>j :call SplitArray()<return>
 imap <Leader>j <c-o>:call SplitArray()<return>
 cnoremap <c-p> <up>
 cnoremap <c-n> <down>
+nmap <Leader><Space> :call Stab()<return>
 
 " Change windows
 nmap <c-h> <c-w>h

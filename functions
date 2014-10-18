@@ -29,3 +29,12 @@ function! SplitArray()
 
   let @/ = oldSearch
 endfunction
+
+function! Stab()
+  let l:tabstop = 1 * input('set tabstop = softtabstop = shiftwidth = ')
+  if l:tabstop > 0
+    let &l:sts = l:tabstop
+    let &l:ts = l:tabstop
+    let &l:sw = l:tabstop
+  endif
+endfunction
