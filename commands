@@ -1,8 +1,8 @@
 " vim: filetype=vim
-command! W w
-command! Wa wa
-command! Q q
-command! Qa qa
+command! W write
+command! Wa wall
+command! Q quit
+command! Qa qall
 cnoremap w!! SudoWrite
 cnoremap !! Dispatch
 
@@ -15,4 +15,4 @@ command! PhpunitCurrentFunction execute 'Dispatch phpunit --verbose --filter ' .
 
 " Git
 command! Reb Git rebase dominion/master
-command! Rebi Git rebase -i dominion/master
+command! Rebi Git rebase --interactive dominion/master

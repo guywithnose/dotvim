@@ -4,11 +4,11 @@ set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set expandtab
-set bs=indent,eol,start " allow backspacing over everything in insert mode
-set ai                  " always set autoindenting on
-set incsearch           " show the best match while search is typed
-set hlsearch           " show the best match while search is typed
-set scrolloff=3         " leave some context around the cursor
+set backspace=indent,eol,start
+set autoindent
+set incsearch
+set hlsearch
+set scrolloff=3
 set autoread
 set background=dark
 set number
@@ -21,8 +21,8 @@ set wildmode=longest,list
 set history=1000
 colorscheme slate
 
-au BufWinLeave *.* mkview
-au BufWinEnter *.* silent loadview
+autocmd BufWinLeave *.* mkview
+autocmd BufWinEnter *.* silent loadview
 
 syntax on
 filetype on

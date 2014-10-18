@@ -26,7 +26,7 @@ autocmd FileType ruby setlocal tabstop=2 shiftwidth=2 softtabstop=2
 autocmd FileType coffee setlocal tabstop=2 shiftwidth=2 softtabstop=2
 
 " Javascript
-autocmd BufNewFile,BufRead *.js setf javascript
+autocmd BufNewFile,BufRead *.js setfiletype javascript
 autocmd FileType javascript setlocal tabstop=2 shiftwidth=2 softtabstop=2 suffixesadd+=.js
 
 " HTML
@@ -38,7 +38,7 @@ autocmd FileType mustache setlocal tabstop=2 shiftwidth=2 softtabstop=2
 
 " Twig
 autocmd FileType twig setlocal tabstop=2 shiftwidth=2 softtabstop=2
-au FileType twig set filetype=htmldjango
+autocmd FileType twig setfiletype htmldjango
 
 " CSS
 autocmd FileType css setlocal tabstop=2 shiftwidth=2 softtabstop=2
@@ -56,19 +56,19 @@ autocmd FileType stylus setlocal tabstop=2 shiftwidth=2 softtabstop=2
 autocmd FileType vim setlocal tabstop=2 shiftwidth=2 softtabstop=2
 
 " WDDX
-autocmd BufNewFile,BufRead *.wddx setf xml
+autocmd BufNewFile,BufRead *.wddx setfiletype xml
 
 " Mutt Mail
 autocmd BufRead /tmp/mutt-* setlocal textwidth=78 formatoptions=croql
 
 " JSON
-autocmd BufNewFile,BufRead *.json setf javascript
+autocmd BufNewFile,BufRead *.json setfiletype javascript
 
 " Apache
-autocmd BufNewFile,BufRead */*vhosts*.conf set filetype=apache
+autocmd BufNewFile,BufRead */*vhosts*.conf setfiletype apache
 
 " Make
-autocmd FileType make set noexpandtab
+autocmd FileType make setlocal noexpandtab
 
 " Dockerfile
-au BufRead,BufNewFile Dockerfile set filetype=dockerfile
+autocmd BufRead,BufNewFile Dockerfile setfiletype dockerfile

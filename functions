@@ -1,13 +1,13 @@
 " vim: filetype=vim
 function! DockerBuild()
   let b:imageName=fnamemodify(bufname('%'), ':p:h:t')
-  exec '!docker build -t ' . b:imageName . ' . && docker run -it ' . b:imageName . ' bash'
+  execute '!docker build -t ' . b:imageName . ' . && docker run -it ' . b:imageName . ' bash'
 endfunction
 
 function! PushCurrentBranch()
   let b:currentBranchName=fugitive#head()
   if b:currentBranchName != ''
-    exec 'Gpush origin ' . b:currentBranchName
+    execute 'Gpush origin ' . b:currentBranchName
   else
     echo 'Not currently on a branch!'
   endif
@@ -16,7 +16,7 @@ endfunction
 function! PushCurrentBranchForce()
   let b:currentBranchName=fugitive#head()
   if b:currentBranchName != ''
-    exec 'Gpush -f origin ' . b:currentBranchName
+    execute 'Gpush -f origin ' . b:currentBranchName
   else
     echo 'Not currently on a branch!'
   endif
@@ -25,7 +25,7 @@ endfunction
 function! SplitArray()
   let oldSearch = @/
 
-  exec 's/\[\(.\)/\[\r\1/g | s/, /,\r/g | s/\(.\)\]/\1,\r\]/g | normal =a]'
+  execute 's/\[\(.\)/\[\r\1/g | s/, /,\r/g | s/\(.\)\]/\1,\r\]/g | normal =a]'
 
   let @/ = oldSearch
 endfunction
@@ -33,8 +33,8 @@ endfunction
 function! Stab()
   let l:tabstop = 1 * input('set tabstop = softtabstop = shiftwidth = ')
   if l:tabstop > 0
-    let &l:sts = l:tabstop
-    let &l:ts = l:tabstop
-    let &l:sw = l:tabstop
+    let &l:softtabstop = l:tabstop
+    let &l:tabstop = l:tabstop
+    let &l:shiftwidth = l:tabstop
   endif
 endfunction
