@@ -21,8 +21,10 @@ set wildmode=longest,list
 set history=1000
 colorscheme slate
 
-autocmd BufWinLeave *.* mkview
-autocmd BufWinEnter *.* silent loadview
+if has("autocmd")
+  autocmd BufWinLeave *.* mkview
+  autocmd BufWinEnter *.* silent loadview
+endif
 
 syntax on
 filetype on

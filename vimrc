@@ -5,7 +5,9 @@ execute pathogen#helptags()
 
 execute 'source ' . vimdir . 'bindings'
 execute 'source ' . vimdir . 'commands'
-execute 'source ' . vimdir . 'fileTypes'
+if has("autocmd")
+  execute 'source ' . vimdir . 'fileTypes'
+endif
 execute 'source ' . vimdir . 'settings'
 execute 'source ' . vimdir . 'variables'
 execute 'source ' . vimdir . 'functions'
