@@ -28,3 +28,10 @@ h gi
 h g
 h quote0
 h path
+Capital marks (mM)
+"Parallel" macros ('<,'>normal @a)
+append macros (qA)
+h quotea
+h gP
+h function-list
+edit macro - :put a, 0"ay$ PVp 177
