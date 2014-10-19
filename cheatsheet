@@ -36,3 +36,7 @@ h gP
 h function-list
 edit macro - :put a, 0"ay$ PVp 177
 h retab
+smartcase
+h /\_
+h 27.8
+h \v
