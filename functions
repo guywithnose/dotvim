@@ -1,9 +1,13 @@
 " vim: filetype=vim
+
+" Build and run the docker file in the current directory
 function! DockerBuild()
   let b:imageName=fnamemodify(bufname('%'), ':p:h:t')
   execute '!docker build -t ' . b:imageName . ' . && docker run -it ' . b:imageName . ' bash'
 endfunction
 
+" Push to the currently checked out branch
+" If no branch is checked out this does nothing and echos a warning
 function! PushCurrentBranch()
   let b:currentBranchName=fugitive#head()
   if b:currentBranchName != ''
@@ -13,15 +17,18 @@ function! PushCurrentBranch()
   endif
 endfunction
 
+" Push to the currently checked out branch with the --force option
+" If no branch is checked out this does nothing and echos a warning
 function! PushCurrentBranchForce()
   let b:currentBranchName=fugitive#head()
   if b:currentBranchName != ''
-    execute 'Gpush -f origin ' . b:currentBranchName
+    execute 'Gpush --force origin ' . b:currentBranchName
   else
     echo 'Not currently on a branch!'
   endif
 endfunction
 
+" Break a PHP array onto multiple lines
 function! SplitArray()
   let oldSearch = @/
 
@@ -30,6 +37,7 @@ function! SplitArray()
   let @/ = oldSearch
 endfunction
 
+" Sets the tabstop, softtabstop, and shiftwidth to the same value
 function! Stab()
   let l:tabstop = 1 * input('set tabstop = softtabstop = shiftwidth = ')
   if l:tabstop > 0
@@ -39,6 +47,8 @@ function! Stab()
   endif
 endfunction
 
+" Set the current search register to the contents of the current visual
+" selection.
 function! VSetSearch()
   let temp = @s
   normal! gv"sy
