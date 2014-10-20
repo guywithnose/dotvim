@@ -1,5 +1,5 @@
 " vim: filetype=vim
-map <Leader>w :update<return>
+map <LEADER>w :update<return>
 imap <Leader>w <c-o>:update<return>
 map <Leader>q :exit<return>
 imap <Leader>q <c-o>:exit<return>
@@ -28,6 +28,8 @@ nmap <Leader><Space> :call Stab()<return>
 nnoremap <F5> :<c-u>silent nohlsearch<return><c-l>
 xnoremap * :<c-u>call VSetSearch()<return>/<C-r>=@/<return><return>
 xnoremap # :<c-u>call VSetSearch()<return>?<C-r>=@/<return><return>
+nnoremap & :&&<return>
+xnoremap & :&&<return>
 
 " Change windows
 nmap <c-h> <c-w>h
