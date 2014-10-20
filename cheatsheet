@@ -42,3 +42,16 @@ h \v
 \zs \ze
 escape() PVP 196
 v_* 
+search \v
+search <c-r><c-w> (autocomplete)
+search /n (count)
+search offset
+substitute & flag
+h s_flags
+substitute \=
+substitute ~
+g&
+h :&
+h submatch
+learn abolish
+:args **/*.php
