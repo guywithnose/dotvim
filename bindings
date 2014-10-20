@@ -13,19 +13,19 @@ map <Leader>ct :update<return>:PhpunitCoverage<return>
 imap <Leader>ct <c-o>:update<return><c-o>:PhpunitCoverage<return>
 map <Leader>f :update<return>:PhpunitCurrentFunction<return>
 imap <Leader>f <c-o>:update<return><c-o>:PhpunitCurrentFunction<return>
-map <Leader>' :SyntasticToggleMode<return>
+map <Leader>' :<c-u>SyntasticToggleMode<return>
 imap <Leader>' <c-o>:SyntasticToggleMode<return>
 map <Leader>d :update<return>:call DockerBuild()<return>
 imap <Leader>d <c-o>:update<return><c-o>:call DockerBuild()<return>
 nmap <c-p> :CtrlP<return>
-map <Leader>p :EnableFastPHPFolds<return>
-map <Leader><F5> :source ~/.vimrc<return>
-map <Leader>j :call SplitArray()<return>
+map <Leader>p :<c-u>EnableFastPHPFolds<return>
+map <Leader><F5> :<c-u>source ~/.vimrc<return>
+map <Leader>j :<c-u>call SplitArray()<return>
 imap <Leader>j <c-o>:call SplitArray()<return>
 cnoremap <c-p> <up>
 cnoremap <c-n> <down>
 nmap <Leader><Space> :call Stab()<return>
-nnoremap <F5> :silent <c-u>nohlsearch<return><c-l>
+nnoremap <F5> :<c-u>silent nohlsearch<return><c-l>
 xnoremap * :<c-u>call VSetSearch()<return>/<C-r>=@/<return><return>
 xnoremap # :<c-u>call VSetSearch()<return>?<C-r>=@/<return><return>
 
@@ -36,9 +36,9 @@ nmap <c-k> <c-w>k
 nmap <c-l> <c-w>l
 
 " Git
-map <Leader>gp :call PushCurrentBranch()<return>
-map <Leader>gpf :call PushCurrentBranchForce()<return>
-map <Leader>gs :Gstatus<return>
+map <Leader>gp :<c-u>call PushCurrentBranch()<return>
+map <Leader>gpf :<c-u>call PushCurrentBranchForce()<return>
+map <Leader>gs :<c-u>Gstatus<return>
 
 " Copy
 nmap <c-c> "+yy
