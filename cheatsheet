@@ -14,7 +14,7 @@ Indent once, repeat PVp42
 h c_ctrl-r_ctrl-w
 ctrl-p, ctrl-n instead of <up><down>
 h c_ctrl-f
-ctrl-x s
+h ctrl-x_s
 <c-w>o
 <c-w>T
 :find
@@ -23,7 +23,6 @@ netrw scp
 ft;,
 search motion PV120 h jump-motions
 bwe h word-motions
-edit existing plugin
 h gi
 h g
 h quote0
