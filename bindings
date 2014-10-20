@@ -26,6 +26,8 @@ cnoremap <c-p> <up>
 cnoremap <c-n> <down>
 nmap <Leader><Space> :call Stab()<return>
 nnoremap <F5> :silent <c-u>nohlsearch<return><c-l>
+xnoremap * :<c-u>call VSetSearch()<return>/<C-r>=@/<return><return>
+xnoremap # :<c-u>call VSetSearch()<return>?<C-r>=@/<return><return>
 
 " Change windows
 nmap <c-h> <c-w>h
