@@ -25,6 +25,7 @@ imap <Leader>j <c-o>:call SplitArray()<return>
 cnoremap <c-p> <up>
 cnoremap <c-n> <down>
 nmap <Leader><Space> :call Stab()<return>
+nnoremap <F5> :silent <c-u>nohlsearch<return><c-l>
 
 " Change windows
 nmap <c-h> <c-w>h
