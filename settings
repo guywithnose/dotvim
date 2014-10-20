@@ -19,6 +19,8 @@ set laststatus=2
 set nrformats=
 set wildmode=longest,list
 set history=1000
+set ignorecase
+set smartcase
 colorscheme slate
 
 if has("autocmd")
