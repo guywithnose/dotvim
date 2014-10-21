@@ -1,5 +1,5 @@
 " vim: filetype=vim
-map <LEADER>w :update<return>
+map <leader>w :update<return>
 imap <Leader>w <c-o>:update<return>
 map <Leader>q :exit<return>
 imap <Leader>q <c-o>:exit<return>
