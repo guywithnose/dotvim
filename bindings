@@ -32,6 +32,8 @@ nnoremap & :&&<return>
 xnoremap & :&&<return>
 nmap _$ :call Preserve("%s/\\s\\+$//e")<CR>
 nmap _= :call Preserve("normal gg=G")<CR>
+vnoremap < <gv
+vnoremap > >gv
 
 " Change windows
 nmap <c-h> <c-w>h
