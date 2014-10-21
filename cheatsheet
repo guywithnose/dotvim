@@ -55,3 +55,4 @@ h :&
 h submatch
 learn abolish
 :args **/*.php
+h \%V
