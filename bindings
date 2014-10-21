@@ -1,27 +1,27 @@
 " vim: filetype=vim
 map <leader>w :update<return>
-imap <Leader>w <c-o>:update<return>
+imap <Leader>w <esc>:update<return>
 map <Leader>q :exit<return>
-imap <Leader>q <c-o>:exit<return>
+imap <Leader>q <esc>:exit<return>
 map <Leader>s :update<return>:PhpCs<return>
-imap <Leader>s <c-o>:update<return><c-o>:PhpCs<return>
+imap <Leader>s <esc>:update<return>:PhpCs<return>
 map <Leader>ns :update<return>:PhpCsNoWarnings<return>
-imap <Leader>ns <c-o>:update<return><c-o>:PhpCsNoWarnings<return>
+imap <Leader>ns <esc>:update<return>:PhpCsNoWarnings<return>
 map <Leader>t :update<return>:Phpunit<return>
-imap <Leader>t <c-o>:update<return><c-o>:Phpunit<return>
+imap <Leader>t <esc>:update<return>:Phpunit<return>
 map <Leader>ct :update<return>:PhpunitCoverage<return>
-imap <Leader>ct <c-o>:update<return><c-o>:PhpunitCoverage<return>
+imap <Leader>ct <esc>:update<return>:PhpunitCoverage<return>
 map <Leader>f :update<return>:PhpunitCurrentFunction<return>
-imap <Leader>f <c-o>:update<return><c-o>:PhpunitCurrentFunction<return>
+imap <Leader>f <esc>:update<return>:PhpunitCurrentFunction<return>
 map <Leader>' :<c-u>SyntasticToggleMode<return>
 imap <Leader>' <c-o>:SyntasticToggleMode<return>
 map <Leader>d :update<return>:call DockerBuild()<return>
-imap <Leader>d <c-o>:update<return><c-o>:call DockerBuild()<return>
+imap <Leader>d <esc>:update<return>:call DockerBuild()<return>
 nmap <c-p> :CtrlP<return>
 map <Leader>p :<c-u>EnableFastPHPFolds<return>
 map <Leader><F5> :<c-u>source ~/.vimrc<return>
 map <Leader>j :<c-u>call SplitArray()<return>
-imap <Leader>j <c-o>:call SplitArray()<return>
+imap <Leader>j <esc>:call SplitArray()<return>
 cnoremap <c-p> <up>
 cnoremap <c-n> <down>
 nmap <Leader><Space> :call Stab()<return>
