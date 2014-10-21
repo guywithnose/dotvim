@@ -26,7 +26,7 @@ colorscheme slate
 if has("autocmd")
   autocmd BufWinLeave * mkview
   autocmd BufWinEnter * silent loadview
-  autocmd BufWritePost * call FindTrailingWhitespaces()
+  autocmd BufWritePost * call Preserve(":call CountTrailingWhitespaceLines()")
 endif
 
 syntax on

@@ -30,6 +30,8 @@ xnoremap * :<c-u>call VSetSearch()<return>/<C-r>=@/<return><return>
 xnoremap # :<c-u>call VSetSearch()<return>?<C-r>=@/<return><return>
 nnoremap & :&&<return>
 xnoremap & :&&<return>
+nmap _$ :call Preserve("%s/\\s\\+$//e")<CR>
+nmap _= :call Preserve("normal gg=G")<CR>
 
 " Change windows
 nmap <c-h> <c-w>h

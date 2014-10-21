@@ -65,20 +65,8 @@ function! QuickfixArgs()
   exec 'silent args ' join(map(values(buffer_numbers), 'fnameescape(v:val)'))
 endfunction
 
-" Remove whitespace at the end of lines
-function! StripTrailingWhitespaces()
-  let _s=@/
-  let l = line(".")
-  let c = col(".")
-  %s/\s\+$//e
-  let @/=_s
-  call cursor(l, c)
-endfunction
-
 " Detect whitespace at the end of lines
-function! FindTrailingWhitespaces()
-  let l = line(".")
-  let c = col(".")
+function! CountTrailingWhitespaceLines()
   let searchCount = 0
   normal G$
   let flags = "w"
@@ -87,8 +75,17 @@ function! FindTrailingWhitespaces()
     let searchCount += 1
     let flags = "W"
   endwhile
-  call cursor(l, c)
   if searchCount > 0
     echo 'Found' searchCount 'lines with trailing whitespace'
   endif
+endfunction
+
+" Run a command without moving the cursor
+function! Preserve(command)
+  let _s=@/
+  let l = line(".")
+  let c = col(".")
+  execute a:command
+  let @/=_s
+  call cursor(l, c)
 endfunction
