@@ -14,5 +14,5 @@ command! PhpunitCoverage Dispatch phpunit --stop-on-failure --coverage-html cove
 command! PhpunitCurrentFunction execute 'Dispatch phpunit --verbose --filter ' . cfi#get_func_name() . ' %'
 
 " Git
-command! Reb Git rebase dominion/master
-command! Rebi Git rebase --interactive dominion/master
+command! Reb Git rebase upstream/master
+command! Rebi Git rebase --interactive upstream/master
