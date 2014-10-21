@@ -24,9 +24,9 @@ set smartcase
 colorscheme slate
 
 if has("autocmd")
-  autocmd BufWinLeave * mkview
-  autocmd BufWinEnter * silent loadview
-  autocmd BufWritePost * call Preserve(":call CountTrailingWhitespaceLines()")
+  autocmd BufWinLeave * silent! mkview
+  autocmd BufWinEnter * silent! loadview
+  autocmd BufWritePost * silent call Preserve(":call CountTrailingWhitespaceLines()")
 endif
 
 syntax on
