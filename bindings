@@ -1,61 +1,61 @@
 " vim: filetype=vim
-map <leader>w :update<return>
-imap <Leader>w <esc>:update<return>
-map <Leader>q :exit<return>
-imap <Leader>q <esc>:exit<return>
-map <Leader>s :update<return>:PhpCs<return>
-imap <Leader>s <esc>:update<return>:PhpCs<return>
-map <Leader>ns :update<return>:PhpCsNoWarnings<return>
-imap <Leader>ns <esc>:update<return>:PhpCsNoWarnings<return>
-map <Leader>t :update<return>:Phpunit<return>
-imap <Leader>t <esc>:update<return>:Phpunit<return>
-map <Leader>ct :update<return>:PhpunitCoverage<return>
-imap <Leader>ct <esc>:update<return>:PhpunitCoverage<return>
-map <Leader>f :update<return>:PhpunitCurrentFunction<return>
-imap <Leader>f <esc>:update<return>:PhpunitCurrentFunction<return>
-map <Leader>' :<c-u>SyntasticToggleMode<return>
-imap <Leader>' <c-o>:SyntasticToggleMode<return>
-map <Leader>d :update<return>:call DockerBuild()<return>
-imap <Leader>d <esc>:update<return>:call DockerBuild()<return>
-nmap <c-p> :CtrlP<return>
-map <Leader>p :<c-u>EnableFastPHPFolds<return>
-map <Leader><F5> :<c-u>source ~/.vimrc<return>
-map <Leader>j :<c-u>call SplitArray()<return>
-imap <Leader>j <esc>:call SplitArray()<return>
+noremap <leader>w :update<return>
+inoremap <Leader>w <esc>:update<return>
+noremap <Leader>q :exit<return>
+inoremap <Leader>q <esc>:exit<return>
+noremap <Leader>s :update<return>:PhpCs<return>
+inoremap <Leader>s <esc>:update<return>:PhpCs<return>
+noremap <Leader>ns :update<return>:PhpCsNoWarnings<return>
+inoremap <Leader>ns <esc>:update<return>:PhpCsNoWarnings<return>
+noremap <Leader>t :update<return>:Phpunit<return>
+inoremap <Leader>t <esc>:update<return>:Phpunit<return>
+noremap <Leader>ct :update<return>:PhpunitCoverage<return>
+inoremap <Leader>ct <esc>:update<return>:PhpunitCoverage<return>
+noremap <Leader>f :update<return>:PhpunitCurrentFunction<return>
+inoremap <Leader>f <esc>:update<return>:PhpunitCurrentFunction<return>
+noremap <Leader>' :<c-u>SyntasticToggleMode<return>
+inoremap <Leader>' <c-o>:SyntasticToggleMode<return>
+noremap <Leader>d :update<return>:call DockerBuild()<return>
+inoremap <Leader>d <esc>:update<return>:call DockerBuild()<return>
+nnoremap <c-p> :CtrlP<return>
+noremap <Leader>p :<c-u>EnableFastPHPFolds<return>
+noremap <Leader><F5> :<c-u>source ~/.vimrc<return>
+noremap <Leader>j :<c-u>call SplitArray()<return>
+inoremap <Leader>j <esc>:call SplitArray()<return>
 cnoremap <c-p> <up>
 cnoremap <c-n> <down>
-nmap <Leader><Space> :call Stab()<return>
+nnoremap <Leader><Space> :call Stab()<return>
 nnoremap <F5> :<c-u>silent nohlsearch<return><c-l>
 xnoremap * :<c-u>call VSetSearch()<return>/<C-r>=@/<return><return>
 xnoremap # :<c-u>call VSetSearch()<return>?<C-r>=@/<return><return>
 nnoremap & :&&<return>
 xnoremap & :&&<return>
-nmap _$ :call Preserve("%s/\\s\\+$//e")<CR>
-nmap _= :call Preserve("normal gg=G")<CR>
+nnoremap _$ :call Preserve("%s/\\s\\+$//e")<CR>
+nnoremap _= :call Preserve("normal gg=G")<CR>
 vnoremap < <gv
 vnoremap > >gv
 
 " Change windows
-nmap <c-h> <c-w>h
-nmap <c-j> <c-w>j
-nmap <c-k> <c-w>k
-nmap <c-l> <c-w>l
+nnoremap <c-h> <c-w>h
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-l> <c-w>l
 
 " Git
-map <Leader>gp :<c-u>call PushCurrentBranch()<return>
-map <Leader>gpf :<c-u>call PushCurrentBranchForce()<return>
-map <Leader>gs :<c-u>Gstatus<return>
+noremap <Leader>gp :<c-u>call PushCurrentBranch()<return>
+noremap <Leader>gpf :<c-u>call PushCurrentBranchForce()<return>
+noremap <Leader>gs :<c-u>Gstatus<return>
 
 " Copy
-nmap <c-c> "+yy
-vmap <c-c> "+y
+nnoremap <c-c> "+yy
+vnoremap <c-c> "+y
 
 " Force myself to learn hjkl
-map <up> <nop>
-map <down> <nop>
-map <left> <nop>
-map <right> <nop>
-imap <up> <nop>
-imap <down> <nop>
-imap <left> <nop>
-imap <right> <nop>
+noremap <up> <nop>
+noremap <down> <nop>
+noremap <left> <nop>
+noremap <right> <nop>
+inoremap <up> <nop>
+inoremap <down> <nop>
+inoremap <left> <nop>
+inoremap <right> <nop>
