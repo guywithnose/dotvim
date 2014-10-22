@@ -41,7 +41,7 @@ h 27.8
 h \v
 \zs \ze
 escape() PVP 196
-v_* 
+v_*
 search \v
 search <c-r><c-w> (autocomplete)
 search /n (count)
@@ -56,3 +56,7 @@ h submatch
 learn abolish
 :args **/*.php
 h \%V
+h i_CTRL_X_CTRL-L
+h i_CTRL_X_CTRL-N
+h i_CTRL_X_CTRL-V
+h i_CTRL_X_CTRL-F
