@@ -12,7 +12,6 @@ set scrolloff=3
 set autoread
 set background=dark
 set number
-set relativenumber
 set modeline
 set statusline=%<%F%y\ %h%m%r%{fugitive#statusline()}%=%a\ %q%k\ %b\ %l\\%L,%c%V\ %p%%\ b:%n
 set laststatus=2
