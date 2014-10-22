@@ -40,6 +40,9 @@ nnoremap _= :call Preserve("normal gg=G")<CR>
 vnoremap < <gv
 vnoremap > >gv
 
+" Open vimrc file
+execute 'nnoremap <Leader>ev :tabnew ' . expand('<sfile>:h') . '/vimrc<return>:cd ' . expand('<sfile>:h') . '<return>'
+
 " Change windows
 nnoremap <c-h> <c-w>h
 nnoremap <c-j> <c-w>j
