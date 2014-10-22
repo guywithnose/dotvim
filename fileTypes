@@ -2,7 +2,8 @@
 " PHP
 autocmd FileType php setlocal textwidth=144
 autocmd FileType php match ErrorMsg '\%>144v.\+'
-autocmd FileType phtml match ErrorMsg '\%>144v.\+'
+autocmd! filetypedetect BufNewFile,BufRead *.phtml
+autocmd BufNewFile,BufRead *.phtml setfiletype html
 
 " C++
 autocmd FileType cpp match ErrorMsg '\%>80v.\+'
@@ -31,7 +32,7 @@ autocmd FileType javascript setlocal tabstop=2 shiftwidth=2 softtabstop=2 suffix
 
 " HTML
 autocmd FileType html setlocal tabstop=2 shiftwidth=2 softtabstop=2
-autocmd FileType htmldjango setlocal tabstop=2 shiftwidth=2 softtabstop=2
+autocmd FileType html match ErrorMsg '\%>144v.\+'
 
 " Mustache/Handlebars
 autocmd FileType mustache setlocal tabstop=2 shiftwidth=2 softtabstop=2

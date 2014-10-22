@@ -5,9 +5,9 @@ Helptags
 
 execute 'source ' . vimdir . 'bindings'
 execute 'source ' . vimdir . 'commands'
-if has("autocmd")
-  execute 'source ' . vimdir . 'fileTypes'
-endif
 execute 'source ' . vimdir . 'settings'
 execute 'source ' . vimdir . 'variables'
 execute 'source ' . vimdir . 'functions'
+if has("autocmd")
+  execute 'source ' . vimdir . 'fileTypes'
+endif
