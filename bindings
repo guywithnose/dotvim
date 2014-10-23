@@ -17,6 +17,7 @@ noremap <Leader>' :<c-u>SyntasticToggleMode<return>
 inoremap <Leader>' <c-o>:SyntasticToggleMode<return>
 noremap <Leader>d :update<return>:call DockerBuild()<return>
 inoremap <Leader>d <esc>:update<return>:call DockerBuild()<return>
+noremap <Leader>a :NERDTreeToggle<return>
 nnoremap <c-p> :CtrlP<return>
 cnoremap %% <c-r>=fnameescape(expand('%:h')).'/'<return>
 nmap <leader>e :CtrlP %%<return>
