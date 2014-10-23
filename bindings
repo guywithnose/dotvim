@@ -3,8 +3,8 @@ noremap <leader>w :update<return>
 inoremap <Leader>w <esc>:update<return>
 noremap <Leader>q :exit<return>
 inoremap <Leader>q <esc>:exit<return>
-noremap <Leader>s :update<return>:PhpCs<return>
-inoremap <Leader>s <esc>:update<return>:PhpCs<return>
+noremap <Leader>cs :update<return>:PhpCs<return>
+inoremap <Leader>cs <esc>:update<return>:PhpCs<return>
 noremap <Leader>ns :update<return>:PhpCsNoWarnings<return>
 inoremap <Leader>ns <esc>:update<return>:PhpCsNoWarnings<return>
 noremap <Leader>t :update<return>:Phpunit<return>
