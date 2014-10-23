@@ -22,7 +22,6 @@ nnoremap <c-p> :CtrlP<return>
 cnoremap %% <c-r>=fnameescape(expand('%:h')).'/'<return>
 nmap <leader>ep :CtrlP %%<return>
 noremap <Leader>p :<c-u>EnableFastPHPFolds<return>
-noremap <Leader><F5> :<c-u>source ~/.vimrc<return>
 noremap <Leader>j :<c-u>call SplitArray()<return>
 inoremap <Leader>j <esc>:call SplitArray()<return>
 vnoremap < <gv
@@ -40,8 +39,9 @@ nnoremap _= :call Preserve("normal gg=G")<CR>
 vnoremap < <gv
 vnoremap > >gv
 
-" Open vimrc file
+" Open and souce vimrc file
 execute 'nnoremap <Leader>ev :tabnew ' . expand('<sfile>:h') . '/vimrc<return>:cd ' . expand('<sfile>:h') . '<return>'
+noremap <Leader>sv :<c-u>source ~/.vimrc<return>
 
 " Change windows
 nnoremap <c-h> <c-w>h
