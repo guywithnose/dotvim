@@ -24,6 +24,8 @@ noremap <Leader>p :<c-u>EnableFastPHPFolds<return>
 noremap <Leader><F5> :<c-u>source ~/.vimrc<return>
 noremap <Leader>j :<c-u>call SplitArray()<return>
 inoremap <Leader>j <esc>:call SplitArray()<return>
+vnoremap < <gv
+vnoremap < <gv
 cnoremap <c-p> <up>
 cnoremap <c-n> <down>
 nnoremap <Leader><Space> :call Stab()<return>
