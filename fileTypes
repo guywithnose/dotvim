@@ -1,4 +1,7 @@
 " vim: filetype=vim
+augroup customFileTypes
+autocmd!
+
 " PHP
 autocmd FileType php setlocal textwidth=144
 autocmd FileType php match ErrorMsg '\%>144v.\+'
@@ -61,3 +64,5 @@ autocmd FileType make setlocal noexpandtab
 
 " Dockerfile
 autocmd BufRead,BufNewFile Dockerfile setfiletype dockerfile
+
+augroup end
