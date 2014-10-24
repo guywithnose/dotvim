@@ -44,7 +44,7 @@ noremap <Leader>sl :SidewaysLeft<return>
 noremap <Leader>sh :SidewaysRight<return>
 
 " Open and souce vimrc file
-execute 'nnoremap <Leader>ev :tabnew ' . expand('<sfile>:h') . '/vimrc<return>:cd ' . expand('<sfile>:h') . '<return>'
+execute 'nnoremap <Leader>ev :tabnew ' . expand('<sfile>:h') . '/vimrc<return>:lcd ' . expand('<sfile>:h') . '<return>'
 noremap <Leader>sv :<c-u>source ~/.vimrc<return>
 
 " Change windows
