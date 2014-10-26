@@ -16,8 +16,6 @@ cnoremap <c-p> <up>
 cnoremap <c-n> <down>
 nnoremap <Leader><Space> :call Stab()<return>
 nnoremap <F5> :<c-u>silent nohlsearch<return><c-l>
-xnoremap * :<c-u>call VSetSearch()<return>/<C-r>=@/<return><return>
-xnoremap # :<c-u>call VSetSearch()<return>?<C-r>=@/<return><return>
 nnoremap & :&&<return>
 xnoremap & :&&<return>
 nnoremap _$ :call Preserve("%s/\\s\\+$//e")<CR>
