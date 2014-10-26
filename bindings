@@ -25,10 +25,6 @@ nnoremap _= :call Preserve("normal gg=G")<CR>
 vnoremap < <gv
 vnoremap > >gv
 
-" Sideways
-noremap <Leader>sl :SidewaysLeft<return>
-noremap <Leader>sh :SidewaysRight<return>
-
 " Open and souce vimrc file
 execute 'nnoremap <Leader>ev :tabnew ' . expand('<sfile>:h') . '/vimrc<return>:lcd ' . expand('<sfile>:h') . '<return>'
 noremap <Leader>sv :<c-u>source ~/.vimrc<return>
@@ -53,7 +49,9 @@ inoremap <down> <nop>
 inoremap <left> <nop>
 inoremap <right> <nop>
 
-"Operators
+" Sideways
+noremap <Leader>sl :SidewaysLeft<return>
+noremap <Leader>sh :SidewaysRight<return>
 omap aa <Plug>SidewaysArgumentTextobjA
 xmap aa <Plug>SidewaysArgumentTextobjA
 omap ia <Plug>SidewaysArgumentTextobjI
