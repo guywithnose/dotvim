@@ -24,6 +24,7 @@ set infercase
 set spelllang=en_us
 colorscheme slate
 set viewoptions=cursor,folds,slash,unix
+set linebreak
 
 if has("autocmd")
   augroup utilities
