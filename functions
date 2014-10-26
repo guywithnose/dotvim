@@ -1,11 +1,5 @@
 " vim: filetype=vim
 
-" Build and run the docker file in the current directory
-function! DockerBuild()
-  let b:imageName=fnamemodify(bufname('%'), ':p:h:t')
-  execute '!docker build -t ' . b:imageName . ' . && docker run -it --entrypoint=env ' . b:imageName . ' bash'
-endfunction
-
 " Push to the currently checked out branch
 " If no branch is checked out this does nothing and echos a warning
 function! PushCurrentBranch()
