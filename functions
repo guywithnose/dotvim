@@ -1,27 +1,5 @@
 " vim: filetype=vim
 
-" Push to the currently checked out branch
-" If no branch is checked out this does nothing and echos a warning
-function! PushCurrentBranch()
-  let b:currentBranchName=fugitive#head()
-  if b:currentBranchName != ''
-    execute 'Gpush origin ' . b:currentBranchName
-  else
-    echo 'Not currently on a branch!'
-  endif
-endfunction
-
-" Push to the currently checked out branch with the --force option
-" If no branch is checked out this does nothing and echos a warning
-function! PushCurrentBranchForce()
-  let b:currentBranchName=fugitive#head()
-  if b:currentBranchName != ''
-    execute 'Gpush --force origin ' . b:currentBranchName
-  else
-    echo 'Not currently on a branch!'
-  endif
-endfunction
-
 " Sets the tabstop, softtabstop, and shiftwidth to the same value
 function! Stab()
   let l:tabstop = 1 * input('set tabstop = softtabstop = shiftwidth = ')

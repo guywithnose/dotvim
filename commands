@@ -5,7 +5,3 @@ command! Q quit
 command! Qa qall
 cnoremap w!! SudoWrite
 cnoremap !! Dispatch
-
-" Git
-command! Reb Git rebase upstream/master
-command! Rebi Git rebase --interactive upstream/master

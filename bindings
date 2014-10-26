@@ -39,11 +39,6 @@ nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-l> <c-w>l
 
-" Git
-noremap <Leader>gp :<c-u>call PushCurrentBranch()<return>
-noremap <Leader>gpf :<c-u>call PushCurrentBranchForce()<return>
-noremap <Leader>gs :<c-u>Gstatus<return>
-
 " Copy
 nnoremap <c-c> "+yy
 vnoremap <c-c> "+y
