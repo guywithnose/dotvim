@@ -6,7 +6,6 @@ inoremap <Leader>q <esc>:exit<return>
 noremap <Leader>' :<c-u>SyntasticToggleMode<return>
 inoremap <Leader>' <c-o>:SyntasticToggleMode<return>
 noremap <Leader>a :NERDTreeToggle<return>
-nnoremap <c-p> :CtrlP<return>
 cnoremap %% <c-r>=fnameescape(expand('%:h')).'/'<return>
 nmap <leader>ep :CtrlP %%<return>
 noremap <Leader>p :<c-u>EnableFastPHPFolds<return>
