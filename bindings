@@ -17,8 +17,7 @@ nnoremap <Leader><Space> :call Stab()<return>
 nnoremap <F5> :<c-u>silent nohlsearch<return><c-l>
 nnoremap & :&&<return>
 xnoremap & :&&<return>
-nnoremap _$ :call Preserve("%s/\\s\\+$//e")<CR>
-nnoremap _= :call Preserve("normal gg=G")<CR>
+nnoremap _= :call trailingWhitespace#preserve("normal gg=G")<CR>
 vnoremap < <gv
 vnoremap > >gv
 

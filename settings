@@ -40,13 +40,6 @@ set viewoptions=cursor,folds,slash,unix
 set linebreak
 set formatoptions=tcroql
 
-if has("autocmd")
-  augroup utilities
-  autocmd!
-  autocmd BufWritePost * call Preserve(":call CountTrailingWhitespaceLines()")
-  augroup end
-endif
-
 syntax on
 filetype on
 filetype plugin indent on
