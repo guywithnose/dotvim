@@ -1,24 +1,5 @@
 " vim: filetype=vim
 
-" Sets the tabstop, softtabstop, and shiftwidth to the same value
-function! Stab()
-  let l:tabstop = 1 * input('set tabstop = softtabstop = shiftwidth = ')
-  if l:tabstop > 0
-    let &l:softtabstop = l:tabstop
-    let &l:tabstop = l:tabstop
-    let &l:shiftwidth = l:tabstop
-  endif
-endfunction
-
-" Set the arglist by the files contained in the quickfix list
-function! QuickfixArgs()
-  let buffer_numbers = {}
-  for quickfix_item in getqflist()
-    let buffer_numbers[quickfix_item['bufnr']] = bufname(quickfix_item['bufnr'])
-  endfor
-  exec 'silent args ' join(map(values(buffer_numbers), 'fnameescape(v:val)'))
-endfunction
-
 " Detect whitespace at the end of lines
 function! CountTrailingWhitespaceLines()
   let searchCount = 0
