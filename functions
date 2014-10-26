@@ -22,15 +22,6 @@ function! PushCurrentBranchForce()
   endif
 endfunction
 
-" Break a PHP array onto multiple lines
-function! SplitArray()
-  let oldSearch = @/
-
-  execute 's/\[\(.\)/\[\r\1/g | s/, /,\r/g | s/\(.\)\]/\1,\r\]/g | normal =a]'
-
-  let @/ = oldSearch
-endfunction
-
 " Sets the tabstop, softtabstop, and shiftwidth to the same value
 function! Stab()
   let l:tabstop = 1 * input('set tabstop = softtabstop = shiftwidth = ')
