@@ -38,7 +38,7 @@ set infercase
 set spelllang=en_us
 set viewoptions=cursor,folds,slash,unix
 set linebreak
-set formatoptions=tcroqla
+set formatoptions=tcroql
 
 if has("autocmd")
   augroup utilities
