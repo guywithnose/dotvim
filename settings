@@ -25,6 +25,7 @@ set spelllang=en_us
 colorscheme slate
 set viewoptions=cursor,folds,slash,unix
 set linebreak
+set formatoptions=tcroqla
 
 if has("autocmd")
   augroup utilities
