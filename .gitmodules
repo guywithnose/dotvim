@@ -73,3 +73,6 @@
 [submodule "bundle/vim-visual-star-search"]
 	path = bundle/vim-visual-star-search
 	url = git@github.com:guywithnose/vim-visual-star-search.git
+[submodule "bundle/restore_view.vim"]
+	path = bundle/restore_view.vim
+	url = git@github.com:vim-scripts/restore_view.vim.git

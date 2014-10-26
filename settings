@@ -23,13 +23,9 @@ set smartcase
 set infercase
 set spelllang=en_us
 colorscheme slate
+set viewoptions=cursor,folds,slash,unix
 
 if has("autocmd")
-  augroup views
-  autocmd!
-  autocmd BufWinLeave * silent! mkview
-  autocmd BufWinEnter * silent! loadview
-  augroup end
   augroup utilities
   autocmd!
   autocmd BufWritePost * call Preserve(":call CountTrailingWhitespaceLines()")
