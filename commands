@@ -6,13 +6,6 @@ command! Qa qall
 cnoremap w!! SudoWrite
 cnoremap !! Dispatch
 
-" PHP
-command! PhpCs !php -l % && phpcs -n %
-command! PhpCsNoWarnings !php -l % && phpcs %
-command! Phpunit Dispatch phpunit --stop-on-failure %
-command! PhpunitCoverage Dispatch phpunit --stop-on-failure --coverage-html coverage %
-command! PhpunitCurrentFunction execute 'Dispatch phpunit --verbose --filter ' . cfi#get_func_name() . ' %'
-
 " Git
 command! Reb Git rebase upstream/master
 command! Rebi Git rebase --interactive upstream/master

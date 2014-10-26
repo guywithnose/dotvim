@@ -3,16 +3,6 @@ noremap <leader>w :update<return>
 inoremap <Leader>w <esc>:update<return>
 noremap <Leader>q :exit<return>
 inoremap <Leader>q <esc>:exit<return>
-noremap <Leader>cs :update<return>:PhpCs<return>
-inoremap <Leader>cs <esc>:update<return>:PhpCs<return>
-noremap <Leader>ns :update<return>:PhpCsNoWarnings<return>
-inoremap <Leader>ns <esc>:update<return>:PhpCsNoWarnings<return>
-noremap <Leader>t :update<return>:Phpunit<return>
-inoremap <Leader>t <esc>:update<return>:Phpunit<return>
-noremap <Leader>ct :update<return>:PhpunitCoverage<return>
-inoremap <Leader>ct <esc>:update<return>:PhpunitCoverage<return>
-noremap <Leader>f :update<return>:PhpunitCurrentFunction<return>
-inoremap <Leader>f <esc>:update<return>:PhpunitCurrentFunction<return>
 noremap <Leader>' :<c-u>SyntasticToggleMode<return>
 inoremap <Leader>' <c-o>:SyntasticToggleMode<return>
 noremap <Leader>d :update<return>:call DockerBuild()<return>
