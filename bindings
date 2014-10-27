@@ -20,6 +20,7 @@ xnoremap & :&&<return>
 nnoremap _= :call trailingWhitespace#preserve("normal gg=G")<CR>
 vnoremap < <gv
 vnoremap > >gv
+cnoremap <c-a> <Home>
 
 " Open and souce vimrc file
 execute 'nnoremap <Leader>ev :tabnew ' . expand('<sfile>:h') . '/vimrc<return>:lcd ' . expand('<sfile>:h') . '<return>'
