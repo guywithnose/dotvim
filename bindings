@@ -47,8 +47,8 @@ inoremap <left> <nop>
 inoremap <right> <nop>
 
 " Sideways
-noremap <Leader>sl :SidewaysLeft<return>
-noremap <Leader>sh :SidewaysRight<return>
+noremap <Leader>sh :SidewaysLeft<return>
+noremap <Leader>sl :SidewaysRight<return>
 omap aa <Plug>SidewaysArgumentTextobjA
 xmap aa <Plug>SidewaysArgumentTextobjA
 omap ia <Plug>SidewaysArgumentTextobjI
