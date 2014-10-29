@@ -82,6 +82,6 @@
 [submodule "bundle/vim-trailing-whitespace"]
 	path = bundle/vim-trailing-whitespace
 	url = git@github.com:guywithnose/vim-trailing-whitespace.git
-[submodule "bundle/vim-php-array-split-join"]
-	path = bundle/vim-php-array-split-join
-	url = git@github.com:guywithnose/vim-php-array-split-join.git
+[submodule "bundle/vim-php-split-join"]
+	path = bundle/vim-php-split-join
+	url = git@github.com:guywithnose/vim-php-split-join.git
