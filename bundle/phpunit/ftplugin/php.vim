@@ -1,7 +1,7 @@
 command! Phpunit Dispatch phpunit --stop-on-failure %
 command! PhpunitCoverage Dispatch phpunit --stop-on-failure --coverage-html coverage %
-command! PhpunitCurrentFunction execute "Dispatch phpunit --verbose --filter '::" . cfi#get_func_name() . "$' %"
-command! PhpunitCurrentFunctionCoverage execute "Dispatch phpunit --verbose --coverage-html coverage --filter '::" . cfi#get_func_name() . "$' %"
+command! PhpunitCurrentFunction execute "Dispatch phpunit --verbose --filter '/::" . cfi#get_func_name() . "$/' %"
+command! PhpunitCurrentFunctionCoverage execute "Dispatch phpunit --verbose --coverage-html coverage --filter '/::" . cfi#get_func_name() . "$/' %"
 
 noremap <LocalLeader>t :update<return>:Phpunit<return>
 inoremap <LocalLeader>t <esc>:update<return>:Phpunit<return>
