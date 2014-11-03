@@ -16,3 +16,5 @@ execute 'source ' . vimdir . 'variables'
 if has("autocmd")
   execute 'source ' . vimdir . 'fileTypes'
 endif
+
+let &rtp = $HOME . '/.vim,' . &rtp
