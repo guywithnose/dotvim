@@ -46,6 +46,10 @@ inoremap <down> <nop>
 inoremap <left> <nop>
 inoremap <right> <nop>
 
+" Force myself to use <c-p> and <c-n>
+cnoremap <up> <nop>
+cnoremap <down> <nop>
+
 " Sideways
 noremap <Leader>sh :SidewaysLeft<return>
 noremap <Leader>sl :SidewaysRight<return>

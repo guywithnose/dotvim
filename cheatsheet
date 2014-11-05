@@ -1,52 +1,29 @@
 <c-h>, <c-w>, <c-u> :h c_ctrl-w
-h c_ctrl-r
-h i_ctrl-r
-h ctrl-[
-<c-r>=
 <c-r><c-p>
 digraphs
-v_o
-gv
-Indent once, repeat PVp42
 :copy, :t, :m
-:normal
-@:
-h c_ctrl-r_ctrl-w
-ctrl-p, ctrl-n instead of <up><down>
-h c_ctrl-f
-h ctrl-x_s
 <c-w>o
-<c-w>T
 :find
 :Explore
 netrw scp
-ft;,
 search motion PV120 h jump-motions
 bwe h word-motions
-h gi
 h g
-h quote0
 h path
 Capital marks (mM)
 "Parallel" macros ('<,'>normal @a)
-append macros (qA)
 h quotea
 h gP
 h function-list
 edit macro - :put a, 0"ay$ PVp 177
-h retab
-smartcase
 h /\_
 h 27.8
-h \v
 \zs \ze
 escape() PVP 196
 v_*
 search \v
 search <c-r><c-w> (autocomplete)
-search /n (count)
 search offset
-substitute & flag
 h s_flags
 substitute \=
 substitute ~
