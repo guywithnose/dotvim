@@ -1,3 +1,6 @@
+" Fallback to normal execution if vim-dispatch is not installed
+silent! command -nargs=* Dispatch execute "!" . <q-args>
+
 command! Phpunit Dispatch phpunit --stop-on-failure %
 command! PhpunitCoverage Dispatch phpunit --stop-on-failure --coverage-html coverage %
 command! PhpunitCurrentFunction execute "Dispatch phpunit --verbose --filter '/::" . cfi#get_func_name() . "$/' %"
