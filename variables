@@ -8,4 +8,5 @@ let g:php_refactor_command='php ~/.vim/refactor.phar.gz'
 let g:markdown_fenced_languages = ['js=javascript', 'json=javascript', 'sh', 'php', 'apache', 'ruby']
 let g:UltiSnipsSnippetsDir = vimdir . 'UltiSnips'
 let g:UltiSnipsSnippetDirectories = ['UltiSnips', g:UltiSnipsSnippetsDir]
+let g:UltiSnipsListSnippets = '<Leader>u'
 let g:skipview_files = ['COMMIT_EDITMSG']
