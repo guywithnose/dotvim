@@ -1,14 +1,3 @@
-noremap <Leader>gr :<c-u>Git rebase upstream/master<return>
-inoremap <Leader>gr <esc>:Git rebase upstream/master<return>
-noremap <Leader>gi :<c-u>Git rebase --interactive upstream/master<return>
-inoremap <Leader>gi <esc>:Git rebase --interactive upstream/master<return>
-noremap <Leader>gp :<c-u>call PushCurrentBranch()<return>
-inoremap <Leader>gp <esc>:call PushCurrentBranch()<return>
-noremap <Leader>gpf :<c-u>call PushCurrentBranch(1)<return>
-inoremap <Leader>gpf <esc>:call PushCurrentBranch(1)<return>
-noremap <Leader>gs :<c-u>Gstatus<return>
-inoremap <Leader>gs <esc>:Gstatus<return>
-
 " Push to the currently checked out branch
 " If no branch is checked out this does nothing and echos a warning
 function! PushCurrentBranch(...)
