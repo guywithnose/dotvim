@@ -50,3 +50,9 @@ omap aa <Plug>SidewaysArgumentTextobjA
 xmap aa <Plug>SidewaysArgumentTextobjA
 omap ia <Plug>SidewaysArgumentTextobjI
 xmap ia <Plug>SidewaysArgumentTextobjI
+
+" Remove deprecated Commentary bindings
+silent! nunmap \\\
+silent! nunmap \\u
+silent! nunmap \\
+silent! xunmap \\
