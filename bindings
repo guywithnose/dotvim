@@ -32,10 +32,9 @@ inoremap  <Leader> q <esc>:exit<return>
 noremap   <Leader> q :exit<return>
 noremap   <Leader> sh :SidewaysLeft<return>
 noremap   <Leader> sl :SidewaysRight<return>
-nnoremap  <Leader> <Space> :call Stab()<return>
 noremap   <Leader> sv :<c-u>source ~/.vimrc<return>
 inoremap  <Leader> w <esc>:update<return>
-noremap   <Leader> w :update<return>
+noremap   <Leader> w :<c-u>update<return>
 nnoremap & :&&<return>
 xnoremap & :&&<return>
 
