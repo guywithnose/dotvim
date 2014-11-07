@@ -1,56 +1,49 @@
 " vim: filetype=vim
-noremap <leader>w :update<return>
-inoremap <Leader>w <esc>:update<return>
-noremap <Leader>q :exit<return>
-inoremap <Leader>q <esc>:exit<return>
-noremap <Leader>' :<c-u>SyntasticToggleMode<return>
-inoremap <Leader>' <c-o>:SyntasticToggleMode<return>
-noremap <Leader>a :NERDTreeToggle<return>
-cnoremap %% <c-r>=fnameescape(expand('%:h')).'/'<return>
-nmap <leader>ep :CtrlP %%<return>
-noremap <Leader>p :<c-u>EnableFastPHPFolds<return>
-vnoremap < <gv
-vnoremap < <gv
-cnoremap <c-p> <up>
-cnoremap <c-n> <down>
-nnoremap <Leader><Space> :call Stab()<return>
-nnoremap <F5> :<c-u>silent nohlsearch<return><c-l>
-nnoremap & :&&<return>
-xnoremap & :&&<return>
-nnoremap _= :call trailingWhitespace#preserve("normal gg=G")<CR>
 cnoremap <c-a> <Home>
-
-" Open and souce vimrc file
-execute 'nnoremap <Leader>ev :tabnew ' . expand('<sfile>:h') . '/vimrc<return>:lcd ' . expand('<sfile>:h') . '<return>'
-noremap <Leader>sv :<c-u>source ~/.vimrc<return>
-
-" Change windows
+nnoremap _= :call trailingWhitespace#preserve("normal gg=G")<CR>
+vnoremap <c-c> "+y
+nnoremap <c-c> "+yy
 nnoremap <c-h> <c-w>h
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-l> <c-w>l
+cnoremap <c-n> <down>
+cnoremap <c-p> <up>
+cnoremap %% <c-r>=fnameescape(expand('%:h')).'/'<return>
+nnoremap <F5> :<c-u>silent nohlsearch<return><c-l>
+vnoremap < <gv
+vnoremap < <gv
+noremap   <Leader> a :NERDTreeToggle<return>
+inoremap  <Leader> ' <c-o>:SyntasticToggleMode<return>
+noremap   <Leader> ' :<c-u>SyntasticToggleMode<return>
+nmap      <leader> ep :CtrlP %%<return>
+noremap   <Leader> gi :<c-u>Git rebase --interactive upstream/master<return>
+inoremap  <Leader> gi <esc>:Git rebase --interactive upstream/master<return>
+noremap   <Leader> gp :<c-u>call PushCurrentBranch()<return>
+inoremap  <Leader> gp <esc>:call PushCurrentBranch()<return>
+noremap   <Leader> gpf :<c-u>call PushCurrentBranch(1)<return>
+inoremap  <Leader> gpf <esc>:call PushCurrentBranch(1)<return>
+noremap   <Leader> gr :<c-u>Git rebase upstream/master<return>
+inoremap  <Leader> gr <esc>:Git rebase upstream/master<return>
+noremap   <Leader> gs :<c-u>Gstatus<return>
+inoremap  <Leader> gs <esc>:Gstatus<return>
+noremap   <Leader> p :<c-u>EnableFastPHPFolds<return>
+inoremap  <Leader> q <esc>:exit<return>
+noremap   <Leader> q :exit<return>
+noremap   <Leader> sh :SidewaysLeft<return>
+noremap   <Leader> sl :SidewaysRight<return>
+nnoremap  <Leader> <Space> :call Stab()<return>
+noremap   <Leader> sv :<c-u>source ~/.vimrc<return>
+inoremap  <Leader> w <esc>:update<return>
+noremap   <leader> w :update<return>
+nnoremap & :&&<return>
+xnoremap & :&&<return>
 
-" Copy
-nnoremap <c-c> "+yy
-vnoremap <c-c> "+y
+" Edit vimrc file
+execute 'nnoremap <Leader>ev :tabnew ' . expand('<sfile>:h') . '/vimrc<return>:lcd ' . expand('<sfile>:h') . '<return>'
 
 " Sideways
-noremap <Leader>sh :SidewaysLeft<return>
-noremap <Leader>sl :SidewaysRight<return>
 omap aa <Plug>SidewaysArgumentTextobjA
 xmap aa <Plug>SidewaysArgumentTextobjA
 omap ia <Plug>SidewaysArgumentTextobjI
 xmap ia <Plug>SidewaysArgumentTextobjI
-
-" Git
-noremap <Leader>gr :<c-u>Git rebase upstream/master<return>
-inoremap <Leader>gr <esc>:Git rebase upstream/master<return>
-noremap <Leader>gi :<c-u>Git rebase --interactive upstream/master<return>
-inoremap <Leader>gi <esc>:Git rebase --interactive upstream/master<return>
-noremap <Leader>gp :<c-u>call PushCurrentBranch()<return>
-inoremap <Leader>gp <esc>:call PushCurrentBranch()<return>
-noremap <Leader>gpf :<c-u>call PushCurrentBranch(1)<return>
-inoremap <Leader>gpf <esc>:call PushCurrentBranch(1)<return>
-noremap <Leader>gs :<c-u>Gstatus<return>
-inoremap <Leader>gs <esc>:Gstatus<return>
-
