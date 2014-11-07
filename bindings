@@ -17,7 +17,7 @@ noremap   <Leader>a :NERDTreeToggle<return>
 inoremap  <Leader>' <c-o>:SyntasticToggleMode<return>
 noremap   <Leader>' :<c-u>SyntasticToggleMode<return>
 nmap      <Leader>ep :CtrlP %%<return>
-noremap   <Leader>ex :let oldSearch=@/<return>$?^#*.?e<return>"sy$:let @/=oldSearch<return>:<c-r>s<return>
+noremap   <Leader>ex :let oldSearch=@/<return>$?^"*.?e<return>"sy$:let @/=oldSearch<return>:<c-r>s<return>
 noremap   <Leader>gi :<c-u>Git rebase --interactive upstream/master<return>
 inoremap  <Leader>gi <esc>:Git rebase --interactive upstream/master<return>
 noremap   <Leader>gp :<c-u>call PushCurrentBranch()<return>
