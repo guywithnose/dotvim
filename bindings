@@ -23,6 +23,12 @@ noremap   <Leader>' :<c-u>SyntasticToggleMode<return>
 noremap   <Leader>a :NERDTreeToggle<return>
 nmap      <Leader>ep :CtrlP %%<return>
 noremap   <Leader>ex :let oldSearch=@/<return>$?^"*.?e<return>"sy$:let @/=oldSearch<return>:<c-r>s<return>
+inoremap  <Leader>gc <esc>:Gcommit<return>
+noremap   <Leader>gc :<c-u>Gcommit<return>
+inoremap  <Leader>gd <esc>:Gdiff<return>
+noremap   <Leader>gd :<c-u>Gdiff<return>
+inoremap  <Leader>ge <esc>:Gedit<return>
+noremap   <Leader>ge :<c-u>Gedit<return>
 inoremap  <Leader>gi <esc>:Git rebase --interactive upstream/master<return>
 noremap   <Leader>gi :<c-u>Git rebase --interactive upstream/master<return>
 inoremap  <Leader>gp <esc>:call PushCurrentBranch()<return>
