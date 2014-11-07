@@ -1,16 +1,24 @@
-<c-h>, <c-w>, <c-u> :h c_ctrl-w
-<c-r><c-p>
-digraphs
-:copy, :t, :m
-<c-w>o
-:find
-:Explore
-netrw scp
-search motion PV120 h jump-motions
-bwe h word-motions
+h c_CTRL-H
+h c_CTRL-W
+h c_CTRL-U
+h CTRL-R_CTRL-P
+h digraphs
+h :t
+h :m
+h CTRL-W_O
+h :find
+h :Ex
+h netrw-start
+search motion PV120
+h jump-motions
+h b
+h w
+h e
+h word-motions
 h g
 h path
-Capital marks (mM)
+h 'A
+h :@
 "Parallel" macros ('<,'>normal @a)
 h quotea
 h gP
@@ -18,22 +26,24 @@ h function-list
 edit macro - :put a, 0"ay$ PVp 177
 h /\_
 h 27.8
-\zs \ze
-escape() PVP 196
-v_*
-search \v
+h \zs
+h \ze
+" PVP 196
+h escape()
+h v_*
+h \v
 search <c-r><c-w> (autocomplete)
-search offset
+h search-offset
 h s_flags
-substitute \=
-substitute ~
-g&
+h sub-replace-expression
+h :~
+h g&
 h :&
 h submatch
-learn abolish
-:args **/*.php
+h abolish
+h :args
 h \%V
-h i_CTRL_X_CTRL-L
-h i_CTRL_X_CTRL-N
-h i_CTRL_X_CTRL-V
-h i_CTRL_X_CTRL-F
+h i_CTRL-X_CTRL-L
+h i_CTRL-X_CTRL-N
+h i_CTRL-X_CTRL-V
+h i_CTRL-X_CTRL-F
