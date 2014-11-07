@@ -10,6 +10,7 @@ execute pathogen#infect('bundle/{}', vimdir . 'bundle/{}')
 Helptags
 
 execute 'source ' . vimdir . 'bindings'
+execute 'source ' . vimdir . 'temporaryMappings'
 execute 'source ' . vimdir . 'commands'
 execute 'source ' . vimdir . 'settings'
 execute 'source ' . vimdir . 'variables'
