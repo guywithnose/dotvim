@@ -9,7 +9,6 @@ endif
 execute pathogen#infect('bundle/{}', vimdir . 'bundle/{}')
 Helptags
 
-execute 'source ' . vimdir . 'bindings'
 execute 'source ' . vimdir . 'temporaryMappings'
 execute 'source ' . vimdir . 'commands'
 execute 'source ' . vimdir . 'settings'
@@ -18,4 +17,4 @@ if has("autocmd")
   execute 'source ' . vimdir . 'fileTypes'
 endif
 
-let &rtp = $HOME . '/.vim,' . &rtp
+let &rtp = $HOME . '/.vim,' . &rtp . ',' . vimdir
