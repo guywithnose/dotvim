@@ -18,8 +18,6 @@ nnoremap <F5> :<c-u>silent nohlsearch<return><c-l>
 nnoremap & :&&<return>
 xnoremap & :&&<return>
 nnoremap _= :call trailingWhitespace#preserve("normal gg=G")<CR>
-vnoremap < <gv
-vnoremap > >gv
 cnoremap <c-a> <Home>
 
 " Open and souce vimrc file
