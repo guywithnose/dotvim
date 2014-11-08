@@ -41,6 +41,8 @@ inoremap  <Leader>gs <esc>:Gstatus<return>
 noremap   <Leader>gs :<c-u>Gstatus<return>
 inoremap  <Leader>i <esc>:call JumpFileForward()<return>
 noremap   <Leader>i :<c-u>call JumpFileForward()<return>
+inoremap  <Leader>m <esc>:Dispatch<return>
+noremap   <Leader>m :Dispatch<return>
 inoremap  <Leader>o <esc>:call JumpFileBackward()<return>
 noremap   <Leader>o :<c-u>call JumpFileBackward()<return>
 noremap   <Leader>p :<c-u>EnableFastPHPFolds<return>
