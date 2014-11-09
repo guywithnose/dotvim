@@ -39,7 +39,6 @@ inoremap  <Leader>gr <esc>:Git rebase upstream/master<return>
 noremap   <Leader>gr :<c-u>Git rebase upstream/master<return>
 inoremap  <Leader>gs <esc>:Gstatus<return>
 noremap   <Leader>gs :<c-u>Gstatus<return>
-inoremap  <Leader>i <esc>:call JumpFileForward()<return>
 noremap   <Leader>i :<c-u>call JumpFileForward()<return>
 inoremap  <Leader>m <esc>:Dispatch<return>
 noremap   <Leader>m :Dispatch<return>
