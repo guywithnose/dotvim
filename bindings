@@ -3,7 +3,7 @@
 " execute "normal jj!ipsort -k2,2 -k1,1\<return>"
 
 vnoremap < <gv
-vnoremap < <gv
+vnoremap > >gv
 nnoremap _= :call trailingWhitespace#preserve("normal gg=G")<CR>
 nnoremap & :&&<return>
 xnoremap & :&&<return>
