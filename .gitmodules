@@ -37,9 +37,6 @@
 [submodule "bundle/vim-snippets"]
 	path = bundle/vim-snippets
 	url = git@github.com:honza/vim-snippets.git
-[submodule "bundle/vim-php-refactoring"]
-	path = bundle/vim-php-refactoring
-	url = git@github.com:vim-php/vim-php-refactoring.git
 [submodule "bundle/gundo.vim"]
 	path = bundle/gundo.vim
 	url = git@github.com:sjl/gundo.vim.git
