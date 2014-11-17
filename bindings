@@ -51,6 +51,8 @@ noremap   <Leader>sh :SidewaysLeft<return>
 noremap   <Leader>sl :SidewaysRight<return>
 inoremap  <Leader>w <esc>:update<return>
 noremap   <Leader>w :<c-u>update<return>
+nmap '' cs"'
+nmap "" cs'"
 
 " Edit and source vimrc file
 execute 'nnoremap <Leader>ev :tabnew ' . expand('<sfile>:h') . '/vimrc<return>:lcd ' . expand('<sfile>:h') . '<return>'
