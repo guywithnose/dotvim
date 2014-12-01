@@ -21,7 +21,8 @@ nnoremap <F5> :<c-u>silent nohlsearch<return><c-l>
 inoremap  <Leader>' <c-o>:SyntasticToggleMode<return>
 noremap   <Leader>' :<c-u>SyntasticToggleMode<return>
 noremap   <Leader>a :NERDTreeToggle<return>
-nmap      <Leader>ep :CtrlP %%<return>
+nmap      <Leader>efp :CtrlP %%<return>
+nmap      <Leader>ecp :CtrlP getcwd()<return>
 noremap   <Leader>ex :let oldSearch=@/<return>$?^"*.?e<return>"sy$:let @/=oldSearch<return>:<c-r>s<return>
 inoremap  <Leader>gc <esc>:Gcommit<return>
 noremap   <Leader>gc :<c-u>Gcommit<return>
