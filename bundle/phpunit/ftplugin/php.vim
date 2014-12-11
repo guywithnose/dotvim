@@ -1,9 +1,9 @@
 " Fallback to normal execution if vim-dispatch is not installed
 silent! command -nargs=* Dispatch execute "!" . <q-args>
 
-command! Phpunit Dispatch phpunit --stop-on-failure %
+command! Phpunit Dispatch phpunit --exclude-group slow --stop-on-failure %
 command! PhpunitCoverage Dispatch phpunit --stop-on-failure --coverage-html coverage %
-command! PhpunitCurrentFunction execute "Dispatch phpunit --verbose --filter '/::" . cfi#get_func_name() . "$/' %"
+command! PhpunitCurrentFunction execute "Dispatch phpunit --exclude-group slow --verbose --filter '/::" . cfi#get_func_name() . "$/' %"
 command! PhpunitCurrentFunctionCoverage execute "Dispatch phpunit --verbose --coverage-html coverage --filter '/::" . cfi#get_func_name() . "$/' %"
 
 noremap <LocalLeader>t :update<return>:Phpunit<return>
