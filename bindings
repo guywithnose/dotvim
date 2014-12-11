@@ -47,7 +47,7 @@ inoremap <Leader>m <esc>:Dispatch<return>
 noremap  <Leader>m :Dispatch<return>
 inoremap <Leader>o <esc>:call JumpFileBackward()<return>
 noremap  <Leader>o :<c-u>call JumpFileBackward()<return>
-noremap  <Leader>p :<c-u>EnableFastPHPFolds<return>
+noremap  <Leader>p :<c-u>EnableFastPHPFolds<return>zM
 inoremap <Leader>q <esc>:exit<return>
 noremap  <Leader>q :exit<return>
 inoremap <Leader>r <esc>:<c-u>update<return>:Dispatch! xdotool key --window $(xdotool search --name "Mozilla") F5<return>
