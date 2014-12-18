@@ -39,6 +39,7 @@ set spelllang=en_us
 set viewoptions=cursor,folds,slash,unix
 set linebreak
 set formatoptions=tcroql
+colorscheme awesome
 
 syntax on
 filetype on
