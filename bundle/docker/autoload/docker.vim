@@ -7,5 +7,5 @@ function! docker#build(...)
     let l:entrypoint = '--entrypoint=env'
     let l:command = a:1
   endif
-  execute '!docker build -t ' . l:imageName . ' . && docker run ' . l:entrypoint . '  -it ' . l:imageName . ' ' . l:command
+  execute '!docker build -t ' . l:imageName . ' . && docker run -e DISPLAY=unix$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix ' . l:entrypoint . '  -it ' . l:imageName . ' ' . l:command
 endfunction

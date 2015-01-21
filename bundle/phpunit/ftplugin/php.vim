@@ -1,10 +1,10 @@
 " Fallback to normal execution if vim-dispatch is not installed
 silent! command -nargs=* Dispatch execute "!" . <q-args>
 
-command! Phpunit Dispatch phpunit --printer 'KujiraPrinter' --include-path /home/build/.composer/vendor/kujira/phpunit-printer/src --exclude-group slow --stop-on-failure %
-command! PhpunitCoverage Dispatch phpunit --printer 'KujiraPrinter' --include-path /home/build/.composer/vendor/kujira/phpunit-printer/src --stop-on-failure --coverage-html coverage %
-command! PhpunitCurrentFunction execute "Dispatch phpunit --printer 'KujiraPrinter' --include-path /home/build/.composer/vendor/kujira/phpunit-printer/src --exclude-group slow --verbose --filter '/::" . cfi#get_func_name() . "$/' %"
-command! PhpunitCurrentFunctionCoverage execute "Dispatch phpunit --printer 'KujiraPrinter' --include-path /home/build/.composer/vendor/kujira/phpunit-printer/src --verbose --coverage-html coverage --filter '/::" . cfi#get_func_name() . "$/' %"
+command! Phpunit Dispatch phpunit --exclude-group slow --stop-on-failure %
+command! PhpunitCoverage Dispatch phpunit --stop-on-failure --coverage-html coverage %
+command! PhpunitCurrentFunction execute "Dispatch phpunit --exclude-group slow --verbose --stop-on-failure --filter '/::" . cfi#get_func_name() . "/' %"
+command! PhpunitCurrentFunctionCoverage execute "Dispatch phpunit --verbose --coverage-html coverage --stop-on-failure --filter '/::" . cfi#get_func_name() . "/' %"
 
 noremap <LocalLeader>t :update<return>:Phpunit<return>
 inoremap <LocalLeader>t <esc>:update<return>:Phpunit<return>
