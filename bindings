@@ -6,7 +6,7 @@ vnoremap < <gv
 vnoremap > >gv
 nmap     '' cs"'
 nmap     "" cs'"
-nnoremap _= :call trailingWhitespace#preserve("normal gg=G")<CR>
+nnoremap _= :normal gg=G<CR>
 nnoremap & :&&<return>
 xnoremap & :&&<return>
 cnoremap %% <c-r>=fnameescape(expand('%:h')).'/'<return>
