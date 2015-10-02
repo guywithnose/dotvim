@@ -41,6 +41,9 @@ set viewoptions=cursor,folds,slash,unix
 set linebreak
 set formatoptions=tcroql
 colorscheme awesome
+if &diff
+  colorscheme evening
+endif
 
 syntax on
 filetype on
