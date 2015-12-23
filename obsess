@@ -1,0 +1,27 @@
+" vim: filetype=vim
+function! GetObsessFile()
+  let gitDir = getcwd() . '/.git'
+  echom gitDir
+  if isdirectory(gitDir)
+    return gitDir . '/info/Session.vim'
+  else
+    return expand('~') . '/src/dotvim/sessions/' . substitute(substitute(expand('%'), '^/\+', '', ''), '/', '-', 'g') . '.vim'
+  endif
+endfunction
+
+function! StartObsess()
+  set sessionoptions-=folds
+  set sessionoptions-=options
+  let obsessFile = GetObsessFile()
+  if argc() == 0
+    execute 'source ' . obsessFile
+    bufdo execute 'edit'
+    execute 'Obsess ' . obsessFile
+  else
+    if !filereadable(obsessFile)
+      execute 'Obsess ' . obsessFile
+    endif
+  endif
+endfunction
+
+autocmd VimEnter * call StartObsess()

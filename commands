@@ -5,3 +5,5 @@ command! Q quit
 command! Qa qall
 cnoremap w!! SudoWrite
 cnoremap !! Dispatch
+
+command! -nargs=1 ReadBase64 execute "normal i=system('base64 < <args> | tr -d \"\\n\"')<CR>"

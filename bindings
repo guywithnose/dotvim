@@ -23,6 +23,7 @@ nnoremap <F5> :<c-u>silent nohlsearch<return><c-l>
 inoremap <Leader>' <c-o>:SyntasticToggleMode<return>
 noremap  <Leader>' :<c-u>SyntasticToggleMode<return>
 noremap  <Leader>a :NERDTreeToggle<return>
+"noremap  <Leader>b :execute 'Obsess ' . GetObsessFile()<return>
 noremap  <Leader>d :copen<return>gg/Failed<return>yG:tabnew<return>pggdddtA/identical<return>0dtAdG:new<return>pkddGkjVkkkkkd:windo diffthis \| windo setlocal buftype=nofile<return><c-w>L
 noremap  <Leader>x :copen<return>G/{\"error<return>va}ly:tabnew<return>p:%s/\n\|\| //g<return>:%!json_pp<return>:%s/\\n/\r/g<return>
 noremap  <Leader>X :copen<return>G/{\"error<return>va}y:tabnew<return>p:%s/\n\|\| //g<return>:%!json_pp<return>:%s/\\n/\r/g<return>

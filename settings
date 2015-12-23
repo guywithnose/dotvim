@@ -22,6 +22,7 @@ set statusline+=%{fugitive#statusline()}     " Fugitive data
 set statusline+=\ %F                         " Full file name
 set statusline+=\ [%{cfi#get_func_name()}]   " Current function
 set statusline+=%=                           " Split left/right
+"set statusline+=%{ObsessionStatus()}            " Obsession Status
 set statusline+=%a                           " Argument list status
 set statusline+=\ %q                         " Quickfix status
 set statusline+=\ %3b                        " Value of charcter under cursor
@@ -40,6 +41,7 @@ set spelllang=en_us
 set viewoptions=cursor,folds,slash,unix
 set linebreak
 set formatoptions=tcroql
+set cmdheight=2
 colorscheme elflord
 if &diff
   colorscheme evening

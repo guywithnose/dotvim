@@ -8,9 +8,8 @@ if !has("python")
 endif
 
 execute pathogen#infect('bundle/{}', vimdir . 'bundle/{}')
-" Helptags
+Helptags
 
-execute 'source ' . vimdir . 'temporaryMappings'
 execute 'source ' . vimdir . 'commands'
 execute 'source ' . vimdir . 'settings'
 execute 'source ' . vimdir . 'variables'
@@ -20,3 +19,5 @@ if has("autocmd")
 endif
 
 let &rtp = $HOME . '/.vim,' . &rtp . ',' . vimdir
+
+" execute 'source ' . vimdir . 'obsess'
