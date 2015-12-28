@@ -76,3 +76,5 @@ silent! nunmap \\\
 silent! nunmap \\u
 silent! nunmap \\
 silent! xunmap \\
+
+:autocmd BufWritePost */src/dotvim/* source %
