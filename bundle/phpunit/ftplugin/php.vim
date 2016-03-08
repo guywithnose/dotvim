@@ -1,10 +1,10 @@
 " Fallback to normal execution if vim-dispatch is not installed
 silent! command -nargs=* Dispatch execute "!" . <q-args>
 
-command! Phpunit Dispatch phpunit --exclude-group slow --stop-on-failure %
-command! PhpunitCoverage Dispatch phpunit --stop-on-failure --coverage-html coverage %
-command! PhpunitCurrentFunction execute "Dispatch phpunit --exclude-group slow --verbose --stop-on-failure --filter '/::" . cfi#get_func_name() . "/' %"
-command! PhpunitCurrentFunctionCoverage execute "Dispatch phpunit --verbose --coverage-html coverage --stop-on-failure --filter '/::" . cfi#get_func_name() . "/' %"
+command! Phpunit Dispatch phpunit --bootstrap tests/progressBootstrap.php --exclude-group slow --stop-on-failure %
+command! PhpunitCoverage Dispatch phpunit --bootstrap tests/progressBootstrap.php --stop-on-failure --coverage-html coverage %
+command! PhpunitCurrentFunction execute "Dispatch phpunit --bootstrap tests/progressBootstrap.php --exclude-group slow --verbose --stop-on-failure --filter '/::" . cfi#get_func_name() . "/' %"
+command! PhpunitCurrentFunctionCoverage execute "Dispatch phpunit --bootstrap tests/progressBootstrap.php --verbose --coverage-html coverage --stop-on-failure --filter '/::" . cfi#get_func_name() . "/' %"
 command! PhpunitCurrentFunctionFast execute "Dispatch phpunit --bootstrap tests/fastbootstrap.php --exclude-group slow --verbose --stop-on-failure --filter '/::" . cfi#get_func_name() . "/' %"
 
 noremap <LocalLeader>t :update<return>:Phpunit<return>
