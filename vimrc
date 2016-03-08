@@ -1,4 +1,4 @@
-let vimdir=expand('<sfile>:h') . '/'
+let g:vimdir=expand('<sfile>:h') . '/'
 
 execute 'source ' . vimdir . 'bundle/vim-pathogen/autoload/pathogen.vim'
 

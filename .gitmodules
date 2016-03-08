@@ -109,3 +109,9 @@
 [submodule "bundle/targets"]
 	path = bundle/targets
 	url = git@github.com:wellle/targets.vim.git
+[submodule "bundle/vimlint"]
+	path = bundle/vimlint
+	url = git@github.com:syngan/vim-vimlint.git
+[submodule "bundle/vimlparser"]
+	path = bundle/vimlparser
+	url = git@github.com:ynkdir/vim-vimlparser.git
