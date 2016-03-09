@@ -1,18 +1,27 @@
 " vim: filetype=vim
-set smartindent
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
-set expandtab
-set backspace=indent,eol,start
 set autoindent
-set incsearch
-set hlsearch
-set scrolloff=3
 set autoread
 set background=dark
-set number
+set backspace=indent,eol,start
+set cmdheight=2
+set expandtab
+set formatoptions=tcroql
+set history=1000
+set hlsearch
+set ignorecase
+set incsearch
+set infercase
+set laststatus=2
+set linebreak
 set modeline
+set nrformats=
+set number
+set scrolloff=3
+set shiftwidth=4
+set smartcase
+set smartindent
+set softtabstop=4
+set spelllang=en_us
 set statusline=
 set statusline+=%y                           " Filetype
 set statusline+=\ %h                         " Help flag
@@ -33,18 +42,9 @@ set statusline+=\ %4l\\%-4L                  " Current / total lines
 set statusline+=%4c%V                        " Column / virtual column
 set statusline+=\ %2p%%                      " Percent through file
 set statusline+=\ b:%n                       " Buffer number
-set laststatus=2
-set nrformats=
-set wildmode=longest,list
-set history=1000
-set ignorecase
-set smartcase
-set infercase
-set spelllang=en_us
+set tabstop=4
 set viewoptions=cursor,folds,slash,unix
-set linebreak
-set formatoptions=tcroql
-set cmdheight=2
+set wildmode=longest,list
 colorscheme elflord
 if &diff
   colorscheme evening
