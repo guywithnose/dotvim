@@ -115,3 +115,6 @@
 [submodule "bundle/vimlparser"]
 	path = bundle/vimlparser
 	url = git@github.com:ynkdir/vim-vimlparser.git
+[submodule "bundle/rust"]
+	path = bundle/rust
+	url = git@github.com:rust-lang/rust.vim.git
