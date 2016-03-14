@@ -1,7 +1,6 @@
 " vim: filetype=vim
 set autoindent
 set autoread
-set autochdir
 set background=dark
 set backspace=indent,eol,start
 set cmdheight=2
