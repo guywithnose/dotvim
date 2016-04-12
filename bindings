@@ -80,3 +80,4 @@ silent! nunmap \\
 silent! xunmap \\
 
 :autocmd BufWritePost */src/dotvim/* source %
+:autocmd BufWritePost /home/*/.tmux.conf silent !tmux source %
