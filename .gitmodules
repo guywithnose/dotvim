@@ -118,3 +118,6 @@
 [submodule "bundle/rust"]
 	path = bundle/rust
 	url = git@github.com:rust-lang/rust.vim.git
+[submodule "bundle/vdebug"]
+	path = bundle/vdebug
+	url = git@github.com:joonty/vdebug.git
