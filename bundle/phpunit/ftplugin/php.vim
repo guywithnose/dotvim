@@ -1,11 +1,8 @@
-" Fallback to normal execution if vim-dispatch is not installed
-silent! command -nargs=* Dispatch execute "!" . <q-args>
-
-command! Phpunit Dispatch phpunit --bootstrap tests/progressBootstrap.php --exclude-group slow --verbose --debug --stop-on-failure % | perl -p -e 's/Starting test '\''(.*)'\''\.\n/\1/'
-command! PhpunitCoverage Dispatch phpunit --bootstrap tests/progressBootstrap.php --verbose --debug --stop-on-failure --coverage-html coverage %
-command! PhpunitCurrentFunction execute "Dispatch phpunit --bootstrap tests/progressBootstrap.php --exclude-group slow --verbose --debug --stop-on-failure --filter '/::" . cfi#get_func_name() . "$/' %"
-command! PhpunitCurrentFunctionCoverage execute "Dispatch phpunit --bootstrap tests/progressBootstrap.php --verbose --debug --coverage-html coverage --stop-on-failure --filter '/::" . cfi#get_func_name() . "$/' %"
-command! PhpunitCurrentFunctionFast execute "Dispatch phpunit --bootstrap tests/fastbootstrap.php --exclude-group slow --verbose --debug --stop-on-failure --filter '/::" . cfi#get_func_name() . "$/' %"
+command! Phpunit TestFile --bootstrap tests/progressBootstrap.php --exclude-group slow --verbose --stop-on-failure
+command! PhpunitCoverage TestFile --bootstrap tests/progressBootstrap.php --verbose --stop-on-failure --coverage-html coverage
+command! PhpunitCurrentFunction TestNearest --bootstrap tests/progressBootstrap.php --exclude-group slow --verbose --stop-on-failure
+command! PhpunitCurrentFunctionCoverage TestNearest --bootstrap tests/progressBootstrap.php --verbose --coverage-html coverage --stop-on-failure
+command! PhpunitCurrentFunctionFast TestNearest --bootstrap tests/fastbootstrap.php --exclude-group slow --verbose --stop-on-failure
 
 noremap <LocalLeader>t :update<return>:Phpunit<return>
 inoremap <LocalLeader>t <esc>:update<return>:Phpunit<return>

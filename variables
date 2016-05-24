@@ -15,3 +15,4 @@ let g:UltiSnipsSnippetDirectories = ['UltiSnips', g:UltiSnipsSnippetsDir]
 let g:UltiSnipsListSnippets = '<Leader>u'
 let g:skipview_files = ['COMMIT_EDITMSG']
 let g:vdebug_options = {'port' : 9090}
+let test#strategy = "dispatch"

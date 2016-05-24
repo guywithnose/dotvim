@@ -32,6 +32,9 @@ autocmd FileType coffee setlocal tabstop=2 shiftwidth=2 softtabstop=2
 " Javascript
 autocmd FileType javascript setlocal tabstop=2 shiftwidth=2 softtabstop=2 suffixesadd+=.js
 
+" Java
+autocmd FileType java setlocal tabstop=2 shiftwidth=2 softtabstop=2
+
 " HTML
 autocmd FileType html setlocal tabstop=2 shiftwidth=2 softtabstop=2
 autocmd FileType html match ErrorMsg '\%>144v.\+'

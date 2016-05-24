@@ -7,5 +7,5 @@ var_dump(${1:"${2:value}"});
 endsnippet
 
 snippet el "error_log" b
-error_log(__LINE__ . "\n" . var_export(${1:"${2:value}"}, true));
+error_log(__FILE__ . ':' . __LINE__ . "\n" . var_export(${1:"${2:value}"}, true));
 endsnippet
