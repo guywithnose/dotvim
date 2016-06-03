@@ -127,3 +127,6 @@
 [submodule "bundle/vim-instant-markdown"]
 	path = bundle/vim-instant-markdown
 	url = git@github.com:suan/vim-instant-markdown.git
+[submodule "bundle/current-func-info.vim"]
+	path = bundle/current-func-info.vim
+	url = git@github.com:tyru/current-func-info.vim.git
