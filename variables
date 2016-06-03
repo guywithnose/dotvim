@@ -2,7 +2,7 @@
 let g:php_sql_query=1
 let g:php_htmlInStrings=1
 let g:syntastic_php_checkers = ['php', 'phpcs']
-let g:syntastic_java_checkers = ['javac', 'checkstyle']
+let g:syntastic_java_checkers = ['javac', 'checkstyle', 'pmd']
 let g:syntastic_javascript_checkers = ['gjslint']
 let g:syntastic_text_checkers = ['proselint', 'language_check']
 let g:syntastic_always_populate_loc_list = 1
@@ -11,6 +11,8 @@ let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
 let g:syntastic_java_checkstyle_conf_file = vimdir . 'syntax_checkers/java/checkstyle.xml'
 let g:syntastic_java_checkstyle_classpath = vimdir . 'syntax_checkers/java/checkstyle-6.19-all.jar'
+let g:syntastic_java_pmd_path = $HOME . '/pmd'
+let g:syntastic_java_pmd_conf_file = vimdir . 'syntax_checkers/java/pmd.xml'
 let g:php_refactor_command='php ~/.vim/refactor.phar.gz'
 let g:markdown_fenced_languages = ['js=javascript', 'json=javascript', 'sh', 'php', 'apache', 'ruby']
 let g:UltiSnipsSnippetsDir = vimdir . 'UltiSnips'
