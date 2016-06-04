@@ -13,10 +13,6 @@ cnoremap %% <c-r>=fnameescape(expand('%:h')).'/'<return>
 cnoremap <c-a> <Home>
 nnoremap <c-c> "+yy
 vnoremap <c-c> "+y
-nnoremap <c-h> <c-w>h
-nnoremap <c-j> <c-w>j
-nnoremap <c-k> <c-w>k
-nnoremap <c-l> <c-w>l
 cnoremap <c-n> <down>
 cnoremap <c-p> <up>
 nnoremap <Leader><F5> :<c-u>silent nohlsearch<return><c-l>
