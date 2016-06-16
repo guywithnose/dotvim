@@ -190,9 +190,6 @@
         </module>
         <module name="JavadocMethod">
             <property name="scope" value="public"/>
-            <property name="allowMissingParamTags" value="true"/>
-            <property name="allowMissingThrowsTags" value="true"/>
-            <property name="allowMissingReturnTag" value="true"/>
             <property name="minLineCount" value="2"/>
             <property name="allowedAnnotations" value="Override, Test"/>
             <property name="allowThrowsTagsForSubclasses" value="true"/>
@@ -237,7 +234,6 @@
         <module name="IllegalType"/>
         <module name="InnerAssignment"/>
         <module name="MagicNumber"/>
-        <module name="MissingCtor"/>
         <module name="ModifiedControlVariable"/>
         <module name="MultipleStringLiterals"/>
         <module name="NestedForDepth"/>
@@ -247,7 +243,6 @@
         <module name="PackageDeclaration"/>
         <module name="ParameterAssignment"/>
         <module name="RequireThis"/>
-        <module name="ReturnCount"/>
         <module name="SimplifyBooleanExpression"/>
         <module name="SimplifyBooleanReturn"/>
         <module name="StringLiteralEquality"/>
@@ -255,7 +250,6 @@
         <module name="JavadocStyle">
             <property name="checkEmptyJavadoc" value="true"/>
         </module>
-        <module name="JavadocVariable"/>
         <module name="BooleanExpressionComplexity"/>
         <module name="ClassDataAbstractionCoupling"/>
         <module name="ClassFanOutComplexity"/>
@@ -263,7 +257,6 @@
         <module name="JavaNCSS"/>
         <module name="NPathComplexity"/>
         <module name="FinalParameters"/>
-        <module name="NewlineAtEndOfFile"/>
         <module name="TodoComment"/>
         <module name="TrailingComment"/>
         <module name="UncommentedMain"/>
@@ -275,7 +268,6 @@
         <module name="StaticVariableName"/>
         <module name="AnonInnerLength"/>
         <module name="ExecutableStatementCount"/>
-        <module name="FileLength"/>
         <module name="MethodCount"/>
         <module name="MethodLength"/>
         <module name="OuterTypeNumber"/>
@@ -287,4 +279,6 @@
         <module name="TypecastParenPad"/>
         <module name="WhitespaceAfter"/>
     </module>
+    <module name="NewlineAtEndOfFile"/>
+    <module name="FileLength"/>
 </module>
