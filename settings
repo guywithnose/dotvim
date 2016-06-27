@@ -45,7 +45,7 @@ set statusline+=\ b:%n                       " Buffer number
 set tabstop=4
 set viewoptions=cursor,folds,slash,unix
 set wildmode=longest,list
-colorscheme elflord
+colorscheme torte
 if &diff
   colorscheme evening
 endif
