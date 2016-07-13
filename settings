@@ -23,6 +23,7 @@ set smartindent
 set softtabstop=4
 set spelllang=en_us
 set statusline=
+set autowrite
 set statusline+=%y                           " Filetype
 set statusline+=\ %h                         " Help flag
 set statusline+=%m                           " Modified flag
