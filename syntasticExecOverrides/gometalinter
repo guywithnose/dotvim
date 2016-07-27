@@ -1,0 +1,2 @@
+#!/bin/bash
+gometalinter --exclude '^vendor' --disable-all --enable deadcode --enable gocyclo --enable defercheck --enable varcheck --enable structcheck --enable errcheck --enable dupl $@
