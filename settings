@@ -23,6 +23,7 @@ set smartindent
 set softtabstop=4
 set spelllang=en_us
 set statusline=
+set autowrite
 set statusline+=%y                           " Filetype
 set statusline+=\ %h                         " Help flag
 set statusline+=%m                           " Modified flag
@@ -45,7 +46,7 @@ set statusline+=\ b:%n                       " Buffer number
 set tabstop=4
 set viewoptions=cursor,folds,slash,unix
 set wildmode=longest,list
-colorscheme elflord
+colorscheme torte
 if &diff
   colorscheme evening
 endif
