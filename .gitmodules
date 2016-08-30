@@ -136,3 +136,6 @@
 [submodule "bundle/vim-ansible-yaml"]
 	path = bundle/vim-ansible-yaml
 	url = git@github.com:chase/vim-ansible-yaml.git
+[submodule "bundle/tpp.vim"]
+	path = bundle/tpp.vim
+	url = git@github.com:vim-scripts/tpp.vim.git
