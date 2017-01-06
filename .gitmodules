@@ -115,9 +115,6 @@
 [submodule "bundle/rust"]
 	path = bundle/rust
 	url = git@github.com:rust-lang/rust.vim.git
-[submodule "bundle/vdebug"]
-	path = bundle/vdebug
-	url = git@github.com:joonty/vdebug.git
 [submodule "bundle/vim-test"]
 	path = bundle/vim-test
 	url = git@github.com:janko-m/vim-test.git
@@ -139,3 +136,6 @@
 [submodule "bundle/tpp.vim"]
 	path = bundle/tpp.vim
 	url = git@github.com:vim-scripts/tpp.vim.git
+[submodule "bundle/vimwiki"]
+	path = bundle/vimwiki
+	url = https://github.com/vimwiki/vimwiki.git

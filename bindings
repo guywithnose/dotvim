@@ -27,6 +27,8 @@ noremap  <Leader>x :copen<return>G/{\"error<return>va}ly:tabnew<return>p:%s/\n\|
 noremap  <Leader>X :copen<return>G/{\"error<return>va}y:tabnew<return>p:%s/\n\|\| //g<return>:%!json_pp<return>:%s/\\n/\r/g<return>
 noremap  <Leader>ecp :CtrlP getcwd()<return>
 nmap     <Leader>efp :CtrlP %%<return>
+noremap  <Leader>eh <esc>:VimwikiAll2HTML<return>
+inoremap <Leader>eh :<c-u>VimwikiAll2HTML<return>
 noremap  <Leader>ex :let oldSearch=@/<return>$?^"*.?e<return>"sy$:let @/=oldSearch<return>:<c-r>s<return>
 inoremap <Leader>gc <esc>:Gcommit<return>
 noremap  <Leader>gc :<c-u>Gcommit<return>
