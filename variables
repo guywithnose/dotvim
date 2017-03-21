@@ -35,3 +35,5 @@ let g:go_highlight_operators = 1
 let g:go_highlight_types = 1
 let g:go_auto_type_info = 1
 let g:go_auto_sameids = 1
+let g:vimwiki_map_prefix = '<Leader>e'
+let g:vimwiki_list = [{'maxhi': 0, 'css_name': 'style.css', 'auto_export': 1, 'diary_index': 'diary', 'template_default': 'default', 'nested_syntaxes': {}, 'auto_toc': 1, 'auto_tags': 1, 'diary_sort': 'desc', 'path': '/home/dude/backup/vimwiki/', 'diary_link_fmt': '%Y-%m-%d', 'template_ext': '.tpl', 'syntax': 'default', 'custom_wiki2html': '', 'automatic_nested_syntaxes': 1, 'index': 'index', 'diary_header': 'Diary', 'ext': '.wiki', 'path_html': '/home/dude/vimwiki_html/', 'temp': 0, 'template_path': '/home/dude/backup/vimwiki/templates/', 'list_margin': -1, 'diary_rel_path': 'diary/'}]
