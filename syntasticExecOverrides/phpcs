@@ -1,0 +1,1 @@
+/home/dude/src/dws-coding-standard/vendor/bin/phpcs --standard=/home/dude/src/dws-coding-standard/DWS $@

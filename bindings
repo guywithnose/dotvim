@@ -62,6 +62,7 @@ inoremap <Leader>R <esc>:<c-u>update<return>:Dispatch! refreshBrowser<return>:Vd
 noremap  <Leader>R :<c-u>update<return>:Dispatch! refreshBrowser<return>:VdebugStart<return>
 noremap  <Leader>sh :SidewaysLeft<return>
 noremap  <Leader>sl :SidewaysRight<return>
+noremap  <Leader>sn :call TogglePhpcsWarnings()<return>
 inoremap <Leader>w <esc>:update<return>
 noremap  <Leader>w :<c-u>update<return>
 
@@ -83,3 +84,12 @@ silent! xunmap \\
 
 :autocmd BufWritePost */src/dotvim/* source %
 :autocmd BufWritePost /home/*/.tmux.conf silent !tmux source %
+
+function! TogglePhpcsWarnings()
+  let l:currentPhpcsExec = g:syntastic_php_phpcs_exec
+  if strpart(l:currentPhpcsExec, strlen(l:currentPhpcsExec) - 1) == 's'
+    let g:syntastic_php_phpcs_exec = g:syntastic_php_phpcs_exec . "n"
+  else
+    let g:syntastic_php_phpcs_exec = strpart(l:currentPhpcsExec, 0, strlen(l:currentPhpcsExec) - 1)
+  endif
+endfunction
