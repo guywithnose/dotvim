@@ -1,2 +1,26 @@
 #!/bin/bash
-gometalinter --exclude '^vendor' --disable-all --enable deadcode --enable gocyclo --enable varcheck --enable structcheck --enable errcheck --enable dupl --dupl-threshold=100 $@
+#--enable misspell \
+#--enable aligncheck \
+#--enable gofmt \
+#--enable golint \
+#--enable gosimple \
+#--enable ineffassign \
+#--enable interfacer \
+#--enable unconvert \
+#--enable unparam \
+#--enable unused \
+#--enable vet \
+#--enable vetshadow \
+gometalinter --vendored-linters \
+    --exclude '^vendor' \
+    --disable-all \
+    --enable deadcode \
+    --enable dupl --dupl-threshold=100 \
+    --enable errcheck \
+    --enable goconst \
+    --enable gocyclo \
+    --enable lll --line-length=160 \
+    --enable staticcheck \
+    --enable varcheck \
+    --enable structcheck \
+    $@
