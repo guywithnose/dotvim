@@ -16,7 +16,7 @@ gometalinter --vendored-linters \
     --disable-all \
     --enable deadcode \
     --enable dupl --dupl-threshold=100 \
-    --enable errcheck \
+    --enable errcheck --exclude 'error return value not checked \(defer.*Close.*errcheck' \
     --enable goconst \
     --enable gocyclo \
     --enable lll --line-length=160 \
