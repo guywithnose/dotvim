@@ -1,1 +1,3 @@
-/home/dude/src/dws-coding-standard/vendor/bin/phpcs --standard=/home/dude/src/dws-coding-standard/DWS $@
+#!/bin/bash
+/home/dude/src/dws-coding-standard/vendor/bin/phpcs --standard=/home/dude/src/dws-coding-standard/DWS $@ && \
+/home/dude/src/dws-coding-standard/vendor/bin/phpcs --standard=/home/dude/src/dws-coding-standard-extra/DWS $@
