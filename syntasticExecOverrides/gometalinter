@@ -7,7 +7,7 @@ gometalinter --vendored-linters \
     --enable dupl --dupl-threshold=100 \
     --enable errcheck --exclude 'error return value not checked \(defer.*Close.*errcheck' \
     --enable goconst \
-    --enable gocyclo \
+    --enable gocyclo --cyclo-over=5 \
     --enable gofmt \
     --enable golint \
     --enable gosimple \
