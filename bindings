@@ -63,6 +63,7 @@ noremap  <Leader>R :<c-u>update<return>:Dispatch! refreshBrowser<return>:VdebugS
 noremap  <Leader>sh :SidewaysLeft<return>
 noremap  <Leader>sl :SidewaysRight<return>
 noremap  <Leader>sn :call TogglePhpcsWarnings()<return>
+noremap  <Leader>sq :call ToggleQuickSave()<return>
 inoremap <Leader>w <esc>:update<return>
 noremap  <Leader>w :<c-u>update<return>
 
@@ -91,5 +92,14 @@ function! TogglePhpcsWarnings()
     let g:syntastic_php_phpcs_exec = g:syntastic_php_phpcs_exec . "n"
   else
     let g:syntastic_php_phpcs_exec = strpart(l:currentPhpcsExec, 0, strlen(l:currentPhpcsExec) - 1)
+  endif
+endfunction
+
+function! ToggleQuickSave()
+  let l:currentGoMetalinterExec = g:syntastic_go_gometalinter_exec
+  if strpart(l:currentGoMetalinterExec, strlen(l:currentGoMetalinterExec) - 5) == 'Quick'
+    let g:syntastic_go_gometalinter_exec = strpart(l:currentGoMetalinterExec, 0, strlen(l:currentGoMetalinterExec) - 5)
+  else
+    let g:syntastic_go_gometalinter_exec = g:syntastic_go_gometalinter_exec . "Quick"
   endif
 endfunction
