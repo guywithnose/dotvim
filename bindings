@@ -67,6 +67,13 @@ noremap  <Leader>sq :call ToggleQuickSave()<return>
 inoremap <Leader>w <esc>:update<return>
 noremap  <Leader>w :<c-u>update<return>
 
+" Chords
+Arpeggio map sf <Leader>sf
+Arpeggio imap sf <Leader>sf
+Arpeggio map we <Leader>w
+Arpeggio imap we <Leader>w
+Arpeggio inoremap jk <Esc>
+
 " Edit and source vimrc file
 execute 'nnoremap <Leader>ev :tabnew ' . expand('<sfile>:h') . '/vimrc<return>:lcd ' . expand('<sfile>:h') . '<return>'
 execute 'noremap <Leader>sv :<c-u>source ~/.vimrc<return>:source ' . expand('<sfile>:h') . '/plugin/loadLast.vim<return>'

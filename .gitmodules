@@ -139,3 +139,6 @@
 [submodule "bundle/vimwiki"]
 	path = bundle/vimwiki
 	url = https://github.com/vimwiki/vimwiki.git
+[submodule "bundle/vim-arpeggio"]
+	path = bundle/vim-arpeggio
+	url = git@github.com:kana/vim-arpeggio.git
