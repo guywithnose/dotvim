@@ -1,7 +1,7 @@
 " vim: filetype=vim
 let g:php_sql_query=1
 let g:php_htmlInStrings=1
-let g:syntastic_php_checkers = ['php', 'phpcs']
+let g:syntastic_php_checkers = ['php', 'phpstan', 'phpcs']
 let g:syntastic_php_phpcs_exec = vimdir . '/syntasticExecOverrides/phpcs'
 let g:syntastic_java_checkers = ['javac', 'checkstyle', 'pmd']
 let g:syntastic_java_javac_exec = vimdir . '/syntasticExecOverrides/javac'
