@@ -1,0 +1,3 @@
+#!/bin/bash
+CWD=$(dirname $0)
+/home/dude/.composer/vendor/bin/phpstan analyze $2 --errorFormat raw --configuration="${CWD}/phpstan.neon"
