@@ -153,10 +153,6 @@ services:
 		tags:
 			- phpstan.rules.rule
 
-	-
-		class: PHPStan\Rules\Methods\CallStaticMethodsRule
-		tags:
-			- phpstan.rules.rule
 
 	-
 		class: PHPStan\Rules\Methods\ExistingClassesInTypehintsRule
