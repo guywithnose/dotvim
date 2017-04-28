@@ -1,8 +1,9 @@
 " vim: filetype=vim
 let g:php_sql_query=1
 let g:php_htmlInStrings=1
-let g:syntastic_php_checkers = ['php', 'phpcs', 'phpstan']
+let g:syntastic_php_checkers = ['php', 'phpcs', 'phpstan', 'phpcsextra']
 let g:syntastic_php_phpcs_exec = vimdir . '/syntasticExecOverrides/phpcs'
+let g:syntastic_php_phpcsextra_exec = vimdir . '/syntasticExecOverrides/phpcs-extra'
 let g:syntastic_php_phpstan_exec = vimdir . '/syntasticExecOverrides/phpstan'
 let g:syntastic_java_checkers = ['javac', 'checkstyle', 'pmd']
 let g:syntastic_java_javac_exec = vimdir . '/syntasticExecOverrides/javac'

@@ -1,1 +1,2 @@
+#!/bin/bash
 /home/dude/src/dws-coding-standard/vendor/bin/phpcs -n --standard=/home/dude/src/dws-coding-standard/DWS $@
