@@ -1,0 +1,1 @@
+nmap <LocalLeader>sm :<c-u>Dispatch mysql -hdsdwsmadevdb02.traderonline.com -ucoldfusion -p'GvKhoylxbK6RmG6hqOZYCsge' traderadm -e <c-r>=shellescape(escape(getline('.') . '; commit;', '!'))<return><return>
