@@ -7,6 +7,7 @@ autocmd FileType php setlocal textwidth=144
 autocmd FileType php match ErrorMsg '\%>144v.\+'
 autocmd! filetypedetect BufNewFile,BufRead *.phtml
 autocmd BufNewFile,BufRead *.phtml setfiletype html
+autocmd FileType php set keywordprg=pman
 
 " C++
 autocmd FileType cpp match ErrorMsg '\%>80v.\+'
