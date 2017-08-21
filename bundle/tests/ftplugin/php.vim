@@ -14,3 +14,6 @@ noremap <LocalLeader>sf :update<return>:PhpunitCurrentFunctionFast<return>
 inoremap <LocalLeader>sf <esc>:update<return>:PhpunitCurrentFunctionFast<return>
 noremap <LocalLeader>cf :update<return>:PhpunitCurrentFunctionCoverage<return>
 inoremap <LocalLeader>cf <esc>:update<return>:PhpunitCurrentFunctionCoverage<return>
+
+noremap <LocalLeader>T :call php#OpenTestFile()<return>
+inoremap <LocalLeader>T <esc>:call php#OpenTestFile()<return>
