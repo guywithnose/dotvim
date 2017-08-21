@@ -22,6 +22,7 @@ inoremap <Leader>" <c-o>:lclose \| let g:syntastic_auto_loc_list = !g:syntastic_
 noremap  <Leader>' :<c-u>SyntasticToggleMode<return>
 noremap  <Leader>" :<c-u>lclose \| let g:syntastic_auto_loc_list = !g:syntastic_auto_loc_list<return>
 noremap  <Leader>a :NERDTreeToggle<return>
+noremap  <Leader>cr :call RunCronusTask()<return>
 "noremap  <Leader>b :execute 'Obsess ' . GetObsessFile()<return>
 noremap  <Leader>d :copen<return>gg/Failed<return>yG:tabnew<return>pggdddtA/identical<return>0dtAdG:new<return>pkddGkjVkkkkkd:windo diffthis \| windo setlocal buftype=nofile<return><c-w>L
 noremap  <Leader>ecp :CtrlP getcwd()<return>
@@ -102,4 +103,8 @@ function! ToggleQuickSave()
   else
     let g:syntastic_go_gometalinter_exec = g:syntastic_go_gometalinter_exec . "Quick"
   endif
+endfunction
+
+function! RunCronusTask()
+  execute 'Dispatch APPLICATION_ENV=development DEBUG=true ./cronus.php ' . substitute(substitute(expand('%:p:r'), '/home/dude/src/cronus-tasks/src/Tasks/', '', ''), '/', '\\\\', '') . ' 1'
 endfunction
