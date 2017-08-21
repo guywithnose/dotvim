@@ -1,6 +1,7 @@
 " vim: filetype=vim
 let g:php_sql_query=1
 let g:php_htmlInStrings=1
+let g:syntastic_sh_checkers = ['bashate', 'shellcheck', 'sh']
 let g:syntastic_php_checkers = ['php', 'phpcs', 'phpstan', 'phpcsextra']
 let g:syntastic_php_phpcs_exec = vimdir . '/syntasticExecOverrides/phpcs'
 let g:syntastic_php_phpcsextra_exec = vimdir . '/syntasticExecOverrides/phpcs-extra'
