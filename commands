@@ -1,4 +1,5 @@
 " vim: filetype=vim
+command! -nargs=1 -complete=file Tabnew tabnew <args>
 command! W write
 command! Wa wall
 command! Q quit
