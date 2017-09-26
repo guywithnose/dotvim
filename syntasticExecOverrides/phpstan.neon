@@ -1,73 +1,15 @@
 parameters:
-	customRulesetUsed: false
-	checkThisOnly: false
+	checkArgumentsPassedByReference: true
 	checkFunctionArgumentTypes: true
+	checkMaybeUndefinedVariables: true
+	checkThisOnly: false
+	customRulesetUsed: false
 	checkUnionTypes: true
 	checkNullables: true
 
 services:
 	-
-		class: PHPStan\Rules\Cast\UselessCastRule
-		tags:
-			- phpstan.rules.rule
-
-	-
-		class: PHPStan\Rules\Comparison\StrictComparisonOfDifferentTypesRule
-		tags:
-			- phpstan.rules.rule
-	-
-		class: PHPStan\Rules\Arrays\AppendedArrayItemTypeRule
-		tags:
-			- phpstan.rules.rule
-
-	-
-		class: PHPStan\Rules\Classes\DefaultValueTypesAssignedToPropertiesRule
-		tags:
-			- phpstan.rules.rule
-
-	-
-		class: PHPStan\Rules\Classes\TypesAssignedToPropertiesRule
-		tags:
-			- phpstan.rules.rule
-
-	-
-		class: PHPStan\Rules\Functions\ClosureReturnTypeRule
-		tags:
-			- phpstan.rules.rule
-
-	-
-		class: PHPStan\Rules\Functions\ReturnTypeRule
-		tags:
-			- phpstan.rules.rule
-
-	-
-		class: PHPStan\Rules\Methods\ReturnTypeRule
-		tags:
-			- phpstan.rules.rule
-
-	-
-		class: PHPStan\Rules\Variables\VariableCloningRule
-		tags:
-			- phpstan.rules.rule
-	-
-		class: PHPStan\Rules\Variables\DefinedVariableRule
-		tags:
-			- phpstan.rules.rule
-
-	-
-		class: PHPStan\Rules\Variables\DefinedVariableInAnonymousFunctionUseRule
-		tags:
-			- phpstan.rules.rule
-
-	-
-		class: PHPStan\Rules\Classes\AccessPropertiesRule
-		arguments:
-			checkThisOnly: %checkThisOnly%
-		tags:
-			- phpstan.rules.rule
-
-	-
-		class: PHPStan\Rules\Classes\AccessStaticPropertiesRule
+		class: PHPStan\Rules\Arrays\DuplicateKeysInLiteralArraysRule
 		tags:
 			- phpstan.rules.rule
 
@@ -78,11 +20,6 @@ services:
 
 	-
 		class: PHPStan\Rules\Classes\ExistingClassInInstanceOfRule
-		tags:
-			- phpstan.rules.rule
-
-	-
-		class: PHPStan\Rules\Classes\ExistingClassesInPropertiesRule
 		tags:
 			- phpstan.rules.rule
 
@@ -102,7 +39,7 @@ services:
 			- phpstan.rules.rule
 
 	-
-		class: PHPStan\Rules\Exceptions\CatchedExceptionExistenceRule
+		class: PHPStan\Rules\Exceptions\CaughtExceptionExistenceRule
 		tags:
 			- phpstan.rules.rule
 
@@ -147,12 +84,9 @@ services:
 			- phpstan.rules.rule
 
 	-
-		class: PHPStan\Rules\Methods\CallMethodsRule
-		arguments:
-			checkThisOnly: %checkThisOnly%
+		class: PHPStan\Rules\Methods\CallStaticMethodsRule
 		tags:
 			- phpstan.rules.rule
-
 
 	-
 		class: PHPStan\Rules\Methods\ExistingClassesInTypehintsRule
@@ -160,6 +94,150 @@ services:
 			- phpstan.rules.rule
 
 	-
+		class: PHPStan\Rules\Properties\AccessPropertiesRule
+		tags:
+			- phpstan.rules.rule
+
+	-
+		class: PHPStan\Rules\Properties\AccessStaticPropertiesRule
+		tags:
+			- phpstan.rules.rule
+
+	-
+		class: PHPStan\Rules\Properties\ExistingClassesInPropertiesRule
+		tags:
+			- phpstan.rules.rule
+
+	-
+		class: PHPStan\Rules\Properties\WritingToReadOnlyPropertiesRule
+		arguments:
+			checkThisOnly: %checkThisOnly%
+		tags:
+			- phpstan.rules.rule
+
+	-
+		class: PHPStan\Rules\Properties\ReadingWriteOnlyPropertiesRule
+		arguments:
+			checkThisOnly: %checkThisOnly%
+		tags:
+			- phpstan.rules.rule
+
+	-
+		class: PHPStan\Rules\Variables\DefinedVariableRule
+		arguments:
+			cliArgumentsVariablesRegistered: %cliArgumentsVariablesRegistered%
+			checkMaybeUndefinedVariables: %checkMaybeUndefinedVariables%
+		tags:
+			- phpstan.rules.rule
+
+	-
+		class: PHPStan\Rules\Variables\DefinedVariableInAnonymousFunctionUseRule
+		arguments:
+			checkMaybeUndefinedVariables: %checkMaybeUndefinedVariables%
+		tags:
+			- phpstan.rules.rule
+
+	-
 		class: PHPStan\Rules\Variables\ThisVariableRule
+		tags:
+			- phpstan.rules.rule
+	-
+		class: PHPStan\Rules\Constants\ConstantRule
+		tags:
+			- phpstan.rules.rule
+
+	-
+		class: PHPStan\Rules\Variables\VariableCertaintyInIssetRule
+		tags:
+			- phpstan.rules.rule
+	-
+		class: PHPStan\Rules\Arrays\AppendedArrayItemTypeRule
+		tags:
+			- phpstan.rules.rule
+
+	-
+		class: PHPStan\Rules\Arrays\InvalidKeyInArrayDimFetchRule
+		tags:
+			- phpstan.rules.rule
+
+	-
+		class: PHPStan\Rules\Arrays\InvalidKeyInArrayItemRule
+		tags:
+			- phpstan.rules.rule
+
+	-
+		class: PHPStan\Rules\Arrays\IterableInForeachRule
+		tags:
+			- phpstan.rules.rule
+
+	-
+		class: PHPStan\Rules\Functions\ClosureReturnTypeRule
+		tags:
+			- phpstan.rules.rule
+
+	-
+		class: PHPStan\Rules\Functions\ReturnTypeRule
+		tags:
+			- phpstan.rules.rule
+
+	-
+		class: PHPStan\Rules\Methods\ReturnTypeRule
+		tags:
+			- phpstan.rules.rule
+
+	-
+		class: PHPStan\Rules\Properties\DefaultValueTypesAssignedToPropertiesRule
+		tags:
+			- phpstan.rules.rule
+
+	-
+		class: PHPStan\Rules\Properties\TypesAssignedToPropertiesRule
+		tags:
+			- phpstan.rules.rule
+
+	-
+		class: PHPStan\Rules\Variables\VariableCloningRule
+		arguments:
+			checkNullables: %checkNullables%
+		tags:
+			- phpstan.rules.rule
+	-
+		class: PHPStan\Rules\Cast\UselessCastRule
+		tags:
+			- phpstan.rules.rule
+
+	-
+		class: PHPStan\Rules\Classes\ImpossibleInstanceOfRule
+		arguments:
+			checkAlwaysTrueInstanceof: %checkAlwaysTrueInstanceof%
+		tags:
+			- phpstan.rules.rule
+
+	-
+		class: PHPStan\Rules\Comparison\ImpossibleCheckTypeFunctionCallRule
+		arguments:
+			checkAlwaysTrueCheckTypeFunctionCall: %checkAlwaysTrueCheckTypeFunctionCall%
+		tags:
+			- phpstan.rules.rule
+
+	-
+		class: PHPStan\Rules\Comparison\StrictComparisonOfDifferentTypesRule
+		tags:
+			- phpstan.rules.rule
+	-
+		class: PHPStan\Rules\Functions\CallToCountOnlyWithArrayOrCountableRule
+		tags:
+			- phpstan.rules.rule
+	-
+		class: PHPStan\Rules\Properties\AccessPropertiesOnPossiblyNullRule
+		arguments:
+			checkThisOnly: %checkThisOnly%
+		tags:
+			- phpstan.rules.rule
+
+	-
+		class: PHPStan\Rules\Methods\CallMethodsOnPossiblyNullRule
+		arguments:
+			checkThisOnly: %checkThisOnly%
 		tags:
 			- phpstan.rules.rule
