@@ -28,13 +28,13 @@ set statusline+=%y                           " Filetype
 set statusline+=\ %h                         " Help flag
 set statusline+=%m                           " Modified flag
 set statusline+=%r                           " Readonly flag
-set statusline+=%{fugitive#statusline()}     " Fugitive data
+set statusline+=[%{fugitive#head()}]         " Fugitive data
 set statusline+=\ %F                         " Full file name
 set statusline+=\ [%{cfi#get_func_name()}]   " Current function
 set statusline+=%=                           " Split left/right
-"set statusline+=%{ObsessionStatus()}            " Obsession Status
+"set statusline+=%{ObsessionStatus()}         " Obsession Status
 set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}            " Obsession Status
+set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 set statusline+=%a                           " Argument list status
 set statusline+=\ %q                         " Quickfix status
