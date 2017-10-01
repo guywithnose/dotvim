@@ -45,7 +45,8 @@ set statusline+=\ %2p%%                      " Percent through file
 set statusline+=\ b:%n                       " Buffer number
 set tabstop=4
 set viewoptions=cursor,folds,slash,unix
-set wildmode=longest:full,list
+set wildmode=longest:full,full
+set wildignorecase
 set path+=**
 set wildmenu
 colorscheme torte
