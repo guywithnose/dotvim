@@ -1,2 +1,0 @@
-#!/bin/bash
-/usr/bin/gjslint --disable 0002 --nojsdoc --max_line_length 144 "$@"

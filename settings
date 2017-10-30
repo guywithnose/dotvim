@@ -34,7 +34,7 @@ set statusline+=\ [%{cfi#get_func_name()}]   " Current function
 set statusline+=%=                           " Split left/right
 "set statusline+=%{ObsessionStatus()}         " Obsession Status
 set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%{ALEGetStatusLine()}
 set statusline+=%*
 set statusline+=%a                           " Argument list status
 set statusline+=\ %q                         " Quickfix status

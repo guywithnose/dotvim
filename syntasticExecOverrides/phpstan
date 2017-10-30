@@ -1,8 +1,0 @@
-#!/bin/bash
-if [ "$1" == "--version" ]
-then
-    echo "1.0"
-fi
-
-CWD=$(dirname $0)
-/home/dude/.composer/vendor/bin/phpstan analyze $5 --errorFormat raw --configuration="${CWD}/phpstan.neon"
