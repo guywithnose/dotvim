@@ -19,7 +19,8 @@ inoremap <F5> <c-o>:redraw!<return>
 nnoremap <F5> :<c-u>redraw!<return>
 inoremap <Leader>' <c-o>:ALEToggleBuffer<return>
 noremap  <Leader>' :<c-u>ALEToggleBuffer<return>
-noremap  <Leader>cr :call RunCronusTask()<return>
+noremap  <Leader>cr :call RunCronusTask("development")<return>
+noremap  <Leader>cpr :call RunCronusTask("production")<return>
 "noremap  <Leader>b :execute 'Obsess ' . GetObsessFile()<return>
 noremap  <Leader>d :copen<return>gg/Failed<return>yG:tabnew<return>pggdddtA/identical<return>0dtAdG:new<return>pkddGkjVkkkkkd:windo diffthis \| windo setlocal buftype=nofile<return><c-w>L
 nmap     <Leader>efp :FZF %%<return>
@@ -81,6 +82,6 @@ silent! xunmap \\
 :autocmd BufWritePost */src/dotvim/* source %
 :autocmd BufWritePost /home/*/.tmux.conf silent !tmux source %
 
-function! RunCronusTask()
-  execute 'Dispatch APPLICATION_ENV=development DEBUG=true ./cronus.php ' . substitute(substitute(expand('%:p:r'), '/home/dude/src/cronus-tasks/src/Tasks/', '', ''), '/', '\\\\', '') . ' 1'
+function! RunCronusTask(env)
+  execute 'Dispatch APPLICATION_ENV=' . a:env . ' DEBUG=true ./cronus.php ' . substitute(substitute(expand('%:p:r'), '/home/dude/src/cronus-tasks/src/Tasks/', '', ''), '/', '\\\\', '') . ' 1'
 endfunction
