@@ -22,8 +22,7 @@ noremap  <Leader>' :<c-u>ALEToggleBuffer<return>
 noremap  <Leader>cr :call RunCronusTask()<return>
 "noremap  <Leader>b :execute 'Obsess ' . GetObsessFile()<return>
 noremap  <Leader>d :copen<return>gg/Failed<return>yG:tabnew<return>pggdddtA/identical<return>0dtAdG:new<return>pkddGkjVkkkkkd:windo diffthis \| windo setlocal buftype=nofile<return><c-w>L
-noremap  <Leader>ecp :CtrlP getcwd()<return>
-nmap     <Leader>efp :CtrlP %%<return>
+nmap     <Leader>efp :FZF %%<return>
 inoremap <Leader>eh :<c-u>VimwikiAll2HTML<return>
 noremap  <Leader>eh <esc>:VimwikiAll2HTML<return>
 noremap  <Leader>ex :let oldSearch=@/<return>$?^"*.?e<return>"sy$:let @/=oldSearch<return>:<c-r>s<return>
