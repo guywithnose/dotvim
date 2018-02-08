@@ -130,9 +130,6 @@
 [submodule "bundle/tpp.vim"]
 	path = pack/bundle/start/tpp.vim
 	url = git@github.com:vim-scripts/tpp.vim.git
-[submodule "bundle/vimwiki"]
-	path = pack/bundle/start/vimwiki
-	url = https://github.com/vimwiki/vimwiki.git
 [submodule "bundle/vim-terraform"]
 	path = pack/bundle/start/vim-terraform
 	url = git@github.com:hashivim/vim-terraform.git
