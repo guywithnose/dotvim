@@ -9,6 +9,10 @@ set rtp=
 packloadall
 execute 'set rtp+=' . oldrtp
 
+let secretFile = vimdir . 'secrets'
+if filereadable(secretFile)
+  execute 'source ' . vimdir . 'secrets'
+endif
 execute 'source ' . vimdir . 'commands'
 execute 'source ' . vimdir . 'settings'
 execute 'source ' . vimdir . 'variables'
