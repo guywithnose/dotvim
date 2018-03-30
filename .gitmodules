@@ -142,3 +142,6 @@
 [submodule "bundle/fzf"]
 	path = pack/bundle/start/fzf
 	url = git@github.com:junegunn/fzf.git
+[submodule "pack/bundle/start/vim-db"]
+	path = pack/bundle/start/vim-db
+	url = git@github.com:tpope/vim-db.git
