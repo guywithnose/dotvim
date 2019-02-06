@@ -1,3 +1,3 @@
 #!/bin/bash
 fileName=$(echo "$@" | sed "s/.*stdin-path=\([^ ]*\).*/\1/")
-/home/dude/src/dws-coding-standard/vendor/bin/phpcs -s --report=emacs --standard=/home/dude/src/dws-coding-standard/DWS $fileName
+/home/dude/src/nebulous/vendor/bin/phpcs -s --report=emacs --standard=/home/dude/phpInclude/coding-standard/ $fileName
