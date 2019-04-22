@@ -68,4 +68,7 @@ autocmd FileType make setlocal noexpandtab
 " Dockerfile
 autocmd BufRead,BufNewFile Dockerfile setfiletype dockerfile
 
+" Xdebug
+autocmd BufNewFile,BufRead *.xt setfiletype xt
+
 augroup end
