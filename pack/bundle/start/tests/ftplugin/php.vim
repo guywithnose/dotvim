@@ -1,8 +1,8 @@
-command! Phpunit TestFile --exclude-group slow --verbose --stop-on-failure
-command! PhpunitCoverage TestFile --verbose --stop-on-failure --coverage-html coverage
-command! PhpunitCurrentFunction TestNearest --exclude-group slow --verbose --stop-on-failure
-command! PhpunitCurrentFunctionCoverage TestNearest --verbose --coverage-html coverage --stop-on-failure
-command! PhpunitCurrentFunctionFast TestNearest --exclude-group slow --verbose --stop-on-failure
+command! Phpunit Dispatch phpunit --exclude-group slow --verbose --debug --stop-on-failure % | perl -p -e 's/Starting test '\''(.*)'\''\.\n/\1/'
+command! PhpunitCoverage Dispatch phpunit --verbose --debug --stop-on-failure --coverage-html coverage %
+command! PhpunitCurrentFunction execute "Dispatch phpunit --exclude-group slow --verbose --debug --stop-on-failure --filter '/::" . cfi#get_func_name() . "\(\ \|$\)/' %"
+command! PhpunitCurrentFunctionCoverage execute "Dispatch phpunit --verbose --debug --coverage-html coverage --stop-on-failure --filter '/::" . cfi#get_func_name() . "$/' %"
+command! PhpunitCurrentFunctionFast execute "Dispatch phpunit --exclude-group slow --verbose --debug --stop-on-failure --filter '/::" . cfi#get_func_name() . "$/' %"
 
 noremap <LocalLeader>t :update<return>:Phpunit<return>
 inoremap <LocalLeader>t <esc>:update<return>:Phpunit<return>
