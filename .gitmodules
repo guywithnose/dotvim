@@ -69,7 +69,7 @@
 	url = git@github.com:guywithnose/vim-trailing-whitespace.git
 [submodule "bundle/vim-split-join"]
 	path = pack/bundle/start/vim-split-join
-	url = git@github.com:guywithnose/vim-split-join.git
+	url = git@gitlab.com:guywithnose/vim-split-join.git
 [submodule "bundle/vim-visual-star-search"]
 	path = pack/bundle/start/vim-visual-star-search
 	url = git@github.com:bronson/vim-visual-star-search.git
