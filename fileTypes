@@ -71,4 +71,10 @@ autocmd BufRead,BufNewFile Dockerfile setfiletype dockerfile
 " Xdebug
 autocmd BufNewFile,BufRead *.xt setfiletype xt
 
+" Typescript
+autocmd FileType typescript setlocal redrawtime=50
+autocmd FileType typescript syntax off
+autocmd FileType typescriptreact setlocal redrawtime=50
+autocmd FileType typescriptreact syntax off
+
 augroup end

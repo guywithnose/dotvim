@@ -9,6 +9,13 @@ set rtp=
 packloadall
 execute 'set rtp+=' . oldrtp
 
+if has("autocmd")
+  autocmd FileType typescript setlocal redrawtime=50
+  autocmd FileType typescript syntax off
+  autocmd FileType typescriptreact setlocal redrawtime=50
+  autocmd FileType typescriptreact syntax off
+endif
+
 let secretFile = vimdir . 'secrets'
 if filereadable(secretFile)
   execute 'source ' . vimdir . 'secrets'

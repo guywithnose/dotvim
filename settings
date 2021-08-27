@@ -30,7 +30,6 @@ set statusline+=%m                           " Modified flag
 set statusline+=%r                           " Readonly flag
 set statusline+=[%{fugitive#head()}]         " Fugitive data
 set statusline+=\ %F                         " Full file name
-set statusline+=\ [%{cfi#get_func_name()}]   " Current function
 set statusline+=%=                           " Split left/right
 "set statusline+=%{ObsessionStatus()}         " Obsession Status
 set statusline+=%#warningmsg#
