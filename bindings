@@ -61,8 +61,8 @@ inoremap <Leader>w <esc>:update<return>
 noremap  <Leader>w :<c-u>update<return>
 noremap  <Leader>x :copen<return>G/{\"error<return>va}ly:tabnew<return>p:%s/\n\|\| //g<return>:%!json_pp<return>:%s/\\n/\r/g<return>
 noremap  <Leader>X :copen<return>G/{\"error<return>va}y:tabnew<return>p:%s/\n\|\| //g<return>:%!json_pp<return>:%s/\\n/\r/g<return>
-nnoremap <leader>* :call ag#Ag('lgrep', '--ignore mock ' . shellescape('func (.* )?' . expand("<cword>")))<CR>
-vnoremap <leader>* :<C-u>call VisualStarSearchSet('/', 'raw')<CR>:call ag#Ag('lgrep', '--ignore mock ' . shellescape('func .* ' . @/))<CR>
+nnoremap <leader>* :call ag#Ag('lgrep', shellescape('func (((?!Mock).)* )?' . expand("<cword>")))<CR>
+vnoremap <leader>* :<C-u>call VisualStarSearchSet('/', 'raw')<CR>:call ag#Ag('lgrep', shellescape('func (((?!Mock).)* )?' . @/))<CR>
 
 au FileType go nmap <leader>d <Plug>(go-def-tab)
 au FileType go nmap <leader>d <Plug>(go-def-tab)
