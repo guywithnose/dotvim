@@ -22,8 +22,14 @@ let g:go_highlight_types = 1
 let g:go_auto_sameids = 1
 let g:vimwiki_map_prefix = '<Leader>e'
 let g:vimwiki_list = [{'maxhi': 0, 'css_name': 'style.css', 'auto_export': 1, 'diary_index': 'diary', 'template_default': 'default', 'nested_syntaxes': {}, 'auto_toc': 1, 'auto_tags': 1, 'diary_sort': 'desc', 'path': '/home/dude/backup/vimwiki/', 'diary_link_fmt': '%Y-%m-%d', 'template_ext': '.tpl', 'syntax': 'default', 'custom_wiki2html': '', 'automatic_nested_syntaxes': 1, 'index': 'index', 'diary_header': 'Diary', 'ext': '.wiki', 'path_html': '/home/dude/vimwiki_html/', 'temp': 0, 'template_path': '/home/dude/backup/vimwiki/templates/', 'list_margin': -1, 'diary_rel_path': 'diary/'}]
-let g:ale_linters = {'go': ['gometalinter', 'gofmt'], 'php': ['phpcs']}
+let g:ale_linters = {'go': ['gometalinter', 'gofmt'], 'php': ['phpcs'], 'javascript': ['eslint'], 'typescriptreact': ['eslint']}
+let g:ale_fixers = {'javascript': ['eslint'], 'typescriptreact': ['eslint']}
 let g:ale_go_gometalinter_options = "--vendored-linters --exclude '^vendor' --disable-all --enable maligned --enable deadcode --enable dupl --dupl-threshold=100 --enable errcheck --enable goconst --enable gocyclo --enable gofmt --enable golint --enable ineffassign --enable interfacer --enable lll --line-length=160 --enable megacheck --enable misspell --enable structcheck --enable unconvert --enable unparam --enable varcheck --enable vet --enable vetshadow"
 let g:ale_set_quickfix = 1
 let g:ale_php_phpcs_executable = vimdir . 'aleExecOverrides/phpcs'
 let g:ale_php_phpcs_use_global = 1
+let g:ale_sign_error = '❌'
+let g:ale_sign_warning = '⚠️'
+let g:ale_fix_on_save = 1
+highlight clear ALEErrorSign
+highlight clear ALEWarningSign
